@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "hexo-deployer-git": "^4.0.0",
+    "hexo-filter-mermaid-diagrams": "^1.0.5",
+    "hexo-generator-feed": "^3.0.0",
+    "hexo-renderer-markdown-it-plus": "^1.0.6",
     "hexo-theme-reimu": "^0.0.6"
   }
 }
