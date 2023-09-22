@@ -22,30 +22,34 @@
 <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/v4-font-face.min.css">
 
     
-<link rel="stylesheet" href="../../../../css/loader.css">
+<link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="#lab 01##1  int main() &amp;#123;     &#x2F;&#x2F;array of vectors     int arr[5][2];    &#x2F;&#x2F;result vector     int result[2]&#x3D;&amp;#123;0,0&amp;#125;;    for (int i&#x3D;0;i&lt;5;i++)&amp;#123;         cin&gt;&gt;arr[i][0];&#x2F;&#x2F;x">
+    <meta name="description" content="#lab 01##1  1234567891011121314int main()&amp;#123;    &#x2F;&#x2F;array of vectors    int arr[5][2];   &#x2F;&#x2F;result vector    int result[2]&#x3D;&amp;#123;0,0&amp;#125;;   for (int i&#x3D;0;i&lt;5;i++)&amp;#123;        cin&gt;&gt;arr[i][0]">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AI_course">
 <meta property="og:url" content="http://example.com/2023/09/22/AI-course/index.html">
 <meta property="og:site_name" content="Li Kun">
-<meta property="og:description" content="#lab 01##1  int main() &amp;#123;     &#x2F;&#x2F;array of vectors     int arr[5][2];    &#x2F;&#x2F;result vector     int result[2]&#x3D;&amp;#123;0,0&amp;#125;;    for (int i&#x3D;0;i&lt;5;i++)&amp;#123;         cin&gt;&gt;arr[i][0];&#x2F;&#x2F;x">
+<meta property="og:description" content="#lab 01##1  1234567891011121314int main()&amp;#123;    &#x2F;&#x2F;array of vectors    int arr[5][2];   &#x2F;&#x2F;result vector    int result[2]&#x3D;&amp;#123;0,0&amp;#125;;   for (int i&#x3D;0;i&lt;5;i++)&amp;#123;        cin&gt;&gt;arr[i][0]">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2023/09/22/AI-course/OIP.jpeg">
+<meta property="og:image" content="http://example.com/OIP.jpeg">
 <meta property="article:published_time" content="2023-09-22T08:11:52.000Z">
 <meta property="article:modified_time" content="2023-09-22T08:14:35.248Z">
 <meta property="article:author" content="Leo Li">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/09/22/AI-course/OIP.jpeg">
+<meta name="twitter:image" content="http://example.com/OIP.jpeg">
     
-        <link rel="alternate" href="../../../../atom.xml" title="Li Kun" type="application/atom+xml">
-    
-    
-        <link rel="shortcut icon" href="../../../../images/yingwulaopo.ico">
+        <link rel="alternate" href="/atom.xml" title="Li Kun" type="application/atom+xml">
     
     
+        <link rel="shortcut icon" href="/images/yingwulaopo.ico">
     
-<link rel="stylesheet" href="../../../../css/style.css">
+    
+        
+<link rel="stylesheet" href="https://unpkg.com/typeface-source-code-pro@1.1.13/index.css">
+
+    
+    
+<link rel="stylesheet" href="/css/style.css">
 
     
         
@@ -119,7 +123,7 @@
                 
                     
                     
-                        <a href="../../../../index.html" id="logo"><h1>AI_course</h1></a>
+                        <a href="/" id="logo"><h1>AI_course</h1></a>
                     
                 
             </div>
@@ -134,28 +138,28 @@
                 
                     <span class="main-nav-link-wrap">
                         <span class="main-nav-icon"></span>
-                        <a class="main-nav-link" href="../../../../index.html">首页</a>
+                        <a class="main-nav-link" href="/">首页</a>
                     </span>
                 
                     <span class="main-nav-link-wrap">
                         <span class="main-nav-icon"></span>
-                        <a class="main-nav-link" href="../../../../archives">归档</a>
+                        <a class="main-nav-link" href="/archives">归档</a>
                     </span>
                 
                     <span class="main-nav-link-wrap">
                         <span class="main-nav-icon"></span>
-                        <a class="main-nav-link" href="../../../../about">关于</a>
+                        <a class="main-nav-link" href="/about">关于</a>
                     </span>
                 
                     <span class="main-nav-link-wrap">
                         <span class="main-nav-icon"></span>
-                        <a class="main-nav-link" href="../../../../friend">友链</a>
+                        <a class="main-nav-link" href="/friend">友链</a>
                     </span>
                 
             </nav>
             <nav id="sub-nav">
                 
-                    <a id="nav-rss-link" class="nav-icon" href="../../../../atom.xml"
+                    <a id="nav-rss-link" class="nav-icon" href="/atom.xml"
                        title="RSS 订阅"></a>
                 
                 
@@ -173,7 +177,7 @@
     <div class="article-inner">
         <div class="article-meta">
             <div class="article-date wow slideInLeft">
-    <a href="" class="article-date-link">
+    <a href="/2023/09/22/AI-course/" class="article-date-link">
         <time datetime="2023-09-22T08:11:52.000Z"
               itemprop="datePublished">2023-09-22</time>
     </a>
@@ -188,56 +192,15 @@
         <div class="e-content article-entry" itemprop="articleBody">
             
                 <p>#lab 01<br>##1 </p>
-<pre><code>int main()
-&#123;
-    //array of vectors
-    int arr[5][2];
-   //result vector
-    int result[2]=&#123;0,0&#125;;
-   for (int i=0;i&lt;5;i++)&#123;
-        cin&gt;&gt;arr[i][0];//x
-        result[0]+= arr[i][0];
-        cin&gt;&gt;arr[i][1];//y
-        result[1]+=arr[i][1];
-    &#125;
-    cout&lt;&lt; &quot; The sum  vector is (&quot;&lt;&lt; result[0]&lt;&lt; &quot;, &quot;&lt;&lt;result[1]&lt;&lt;&#39;)&#39;&lt;&lt;endl;
-&#125;
-</code></pre>
-<p>##2<br><img src="/2023/09/22/AI-course/OIP.jpeg"></p>
-<pre><code>// number of element in a vector
-    int N=4;
-int norm_L1(int arr[])
-&#123;
-    long result = 0;
-    for(int i=0;i&lt;N;i++)&#123;
-        result+=abs(arr[i]);
-    &#125;
-    return  result;
-&#125;
-double norm_L2(int arr[])
-&#123;
-    double sqrSum=0;
-    for(int i=0;i&lt;N;i++)&#123;
-        sqrSum+=arr[i]*arr[i];
-    &#125;
-    return sqrt(sqrSum);
-&#125;
-int main()
-&#123;
-    int arr[N];
-    for( int i=0;i&lt;N;i++)&#123;
-        cout&lt;&lt;&quot;arr[&quot;&lt;&lt;i&lt;&lt;&quot;]= &quot;;
-        cin&gt;&gt;arr[i];
-    &#125;
-   cout&lt;&lt; &quot;Vector&#39;s norm L1 = &quot;&lt;&lt; norm_L1(arr)&lt;&lt;&#39;\n&#39;;
-    cout&lt;&lt; &quot;Vecotr&#39;s norm L2 = &quot;&lt;&lt; norm_L2(arr)&lt;&lt; &#39;\n&#39;;
-   return 0;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    //array of vectors</span><br><span class="line">    int arr[5][2];</span><br><span class="line">   //result vector</span><br><span class="line">    int result[2]=&#123;0,0&#125;;</span><br><span class="line">   for (int i=0;i&lt;5;i++)&#123;</span><br><span class="line">        cin&gt;&gt;arr[i][0];//x</span><br><span class="line">        result[0]+= arr[i][0];</span><br><span class="line">        cin&gt;&gt;arr[i][1];//y</span><br><span class="line">        result[1]+=arr[i][1];</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt; &quot; The sum  vector is (&quot;&lt;&lt; result[0]&lt;&lt; &quot;, &quot;&lt;&lt;result[1]&lt;&lt;&#x27;)&#x27;&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>##2<br><img src="/OIP.jpeg"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">// number of element in a vector</span><br><span class="line">    int N=4;</span><br><span class="line">int norm_L1(int arr[])</span><br><span class="line">&#123;</span><br><span class="line">    long result = 0;</span><br><span class="line">    for(int i=0;i&lt;N;i++)&#123;</span><br><span class="line">        result+=abs(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    return  result;</span><br><span class="line">&#125;</span><br><span class="line">double norm_L2(int arr[])</span><br><span class="line">&#123;</span><br><span class="line">    double sqrSum=0;</span><br><span class="line">    for(int i=0;i&lt;N;i++)&#123;</span><br><span class="line">        sqrSum+=arr[i]*arr[i];</span><br><span class="line">    &#125;</span><br><span class="line">    return sqrt(sqrSum);</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int arr[N];</span><br><span class="line">    for( int i=0;i&lt;N;i++)&#123;</span><br><span class="line">        cout&lt;&lt;&quot;arr[&quot;&lt;&lt;i&lt;&lt;&quot;]= &quot;;</span><br><span class="line">        cin&gt;&gt;arr[i];</span><br><span class="line">    &#125;</span><br><span class="line">   cout&lt;&lt; &quot;Vector&#x27;s norm L1 = &quot;&lt;&lt; norm_L1(arr)&lt;&lt;&#x27;\n&#x27;;</span><br><span class="line">    cout&lt;&lt; &quot;Vecotr&#x27;s norm L2 = &quot;&lt;&lt; norm_L2(arr)&lt;&lt; &#x27;\n&#x27;;</span><br><span class="line">   return 0;</span><br></pre></td></tr></table></figure>
+
 
             
         </div>
         <footer class="article-footer">
-            <a data-url="http://example.com/2023/09/22/AI-course/" data-id="clmud1un30001wcukffvb79rj" data-title="AI_course"
+            <a data-url="http://example.com/2023/09/22/AI-course/" data-id="clmue3xqk00027oukbc85gc8f" data-title="AI_course"
                class="article-share-link">分享</a>
             
             
@@ -259,7 +222,7 @@ int main()
                              class="lazyload">
                     
                 
-                <a href="../test-ima/"></a>
+                <a href="/2023/09/22/test-ima/"></a>
                 <div class="article-nav-caption">后一篇</div>
                 <h3 class="article-nav-title">
                     
@@ -296,7 +259,7 @@ int main()
         <div class="sidebar-state">
             <div class="sidebar-state-article">
                 <div>文章</div>
-                <div class="sidebar-state-number">6</div>
+                <div class="sidebar-state-number">4</div>
             </div>
             <div class="sidebar-state-category">
                 <div>分类</div>
@@ -329,25 +292,25 @@ int main()
         <div class="sidebar-menu">
             
                 <div class="sidebar-menu-link-wrap">
-                    <a class="sidebar-menu-link-dummy" href="../../../../index.html"></a>
+                    <a class="sidebar-menu-link-dummy" href="/"></a>
                     <span class="sidebar-menu-icon"></span>
                     <div class="sidebar-menu-link">首页</div>
                 </div>
             
                 <div class="sidebar-menu-link-wrap">
-                    <a class="sidebar-menu-link-dummy" href="../../../../archives"></a>
+                    <a class="sidebar-menu-link-dummy" href="/archives"></a>
                     <span class="sidebar-menu-icon"></span>
                     <div class="sidebar-menu-link">归档</div>
                 </div>
             
                 <div class="sidebar-menu-link-wrap">
-                    <a class="sidebar-menu-link-dummy" href="../../../../about"></a>
+                    <a class="sidebar-menu-link-dummy" href="/about"></a>
                     <span class="sidebar-menu-icon"></span>
                     <div class="sidebar-menu-link">关于</div>
                 </div>
             
                 <div class="sidebar-menu-link-wrap">
-                    <a class="sidebar-menu-link-dummy" href="../../../../friend"></a>
+                    <a class="sidebar-menu-link-dummy" href="/friend"></a>
                     <span class="sidebar-menu-icon"></span>
                     <div class="sidebar-menu-link">友链</div>
                 </div>
@@ -365,7 +328,7 @@ int main()
     <div class="widget-wrap wow fadeInRight">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2023/08/">八月 2023</a></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a></li></ul>
         </div>
     </div>
 
@@ -398,7 +361,7 @@ int main()
                     2.8k
                     &nbsp;|&nbsp;
                     <span class="icon-coffee"></span>
-                    00:15
+                    00:13
                 </div>
             
             
@@ -425,7 +388,7 @@ int main()
         <div class="sidebar-state">
             <div class="sidebar-state-article">
                 <div>文章</div>
-                <div class="sidebar-state-number">6</div>
+                <div class="sidebar-state-number">4</div>
             </div>
             <div class="sidebar-state-category">
                 <div>分类</div>
@@ -458,25 +421,25 @@ int main()
         <div class="sidebar-menu">
             
                 <div class="sidebar-menu-link-wrap">
-                    <a class="sidebar-menu-link-dummy" href="../../../../index.html"></a>
+                    <a class="sidebar-menu-link-dummy" href="/"></a>
                     <span class="sidebar-menu-icon"></span>
                     <div class="sidebar-menu-link">首页</div>
                 </div>
             
                 <div class="sidebar-menu-link-wrap">
-                    <a class="sidebar-menu-link-dummy" href="../../../../archives"></a>
+                    <a class="sidebar-menu-link-dummy" href="/archives"></a>
                     <span class="sidebar-menu-icon"></span>
                     <div class="sidebar-menu-link">归档</div>
                 </div>
             
                 <div class="sidebar-menu-link-wrap">
-                    <a class="sidebar-menu-link-dummy" href="../../../../about"></a>
+                    <a class="sidebar-menu-link-dummy" href="/about"></a>
                     <span class="sidebar-menu-icon"></span>
                     <div class="sidebar-menu-link">关于</div>
                 </div>
             
                 <div class="sidebar-menu-link-wrap">
-                    <a class="sidebar-menu-link-dummy" href="../../../../friend"></a>
+                    <a class="sidebar-menu-link-dummy" href="/friend"></a>
                     <span class="sidebar-menu-icon"></span>
                     <div class="sidebar-menu-link">友链</div>
                 </div>
@@ -518,7 +481,7 @@ int main()
 
 
 
-<script src="../../../../js/script.js"></script>
+<script src="/js/script.js"></script>
 
 
 
@@ -552,6 +515,8 @@ int main()
             <span class="popup-btn-close"></span>
         </div>
     </div>
-    </body>
+    <!-- hexo injector body_end start -->
+<script src="/js/insertHighlight.js"></script>
+<!-- hexo injector body_end end --></body>
     </html>
 
