@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-09-22T05:35:50.363Z</updated>
+  <updated>2023-09-22T08:14:35.248Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,19 +17,24 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test_ima</title>
-    <link href="http://example.com/2023/09/22/test-ima/"/>
-    <id>http://example.com/2023/09/22/test-ima/</id>
-    <published>2023-09-22T05:34:02.000Z</published>
-    <updated>2023-09-22T05:35:50.363Z</updated>
+    <title>AI_course</title>
+    <link href="http://example.com/2023/09/22/AI-course/"/>
+    <id>http://example.com/2023/09/22/AI-course/</id>
+    <published>2023-09-22T08:11:52.000Z</published>
+    <updated>2023-09-22T08:14:35.248Z</updated>
     
-    <content type="html"><![CDATA[<p>！<a href="108879310_p0_square1200.jpg">test</a></p>]]></content>
+    <content type="html"><![CDATA[<p>#lab 01<br>##1 </p><pre><code>int main()&#123;    //array of vectors    int arr[5][2];   //result vector    int result[2]=&#123;0,0&#125;;   for (int i=0;i&lt;5;i++)&#123;        cin&gt;&gt;arr[i][0];//x        result[0]+= arr[i][0];        cin&gt;&gt;arr[i][1];//y        result[1]+=arr[i][1];    &#125;    cout&lt;&lt; &quot; The sum  vector is (&quot;&lt;&lt; result[0]&lt;&lt; &quot;, &quot;&lt;&lt;result[1]&lt;&lt;&#39;)&#39;&lt;&lt;endl;&#125;</code></pre><p>##2<br><img src="/2023/09/22/AI-course/OIP.jpeg"></p><pre><code>// number of element in a vector    int N=4;int norm_L1(int arr[])&#123;    long result = 0;    for(int i=0;i&lt;N;i++)&#123;        result+=abs(arr[i]);    &#125;    return  result;&#125;double norm_L2(int arr[])&#123;    double sqrSum=0;    for(int i=0;i&lt;N;i++)&#123;        sqrSum+=arr[i]*arr[i];    &#125;    return sqrt(sqrSum);&#125;int main()&#123;    int arr[N];    for( int i=0;i&lt;N;i++)&#123;        cout&lt;&lt;&quot;arr[&quot;&lt;&lt;i&lt;&lt;&quot;]= &quot;;        cin&gt;&gt;arr[i];    &#125;   cout&lt;&lt; &quot;Vector&#39;s norm L1 = &quot;&lt;&lt; norm_L1(arr)&lt;&lt;&#39;\n&#39;;    cout&lt;&lt; &quot;Vecotr&#39;s norm L2 = &quot;&lt;&lt; norm_L2(arr)&lt;&lt; &#39;\n&#39;;   return 0;</code></pre>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;！&lt;a href=&quot;108879310_p0_square1200.jpg&quot;&gt;test&lt;/a&gt;&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;#lab 01&lt;br&gt;##1 &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;int main()
+&amp;#123;
+    //array of vectors
+    int arr[5][2];
+   //result vector
+    int result[2]=&amp;#123;0,0</summary>
       
     
     
@@ -38,12 +43,20 @@
   </entry>
   
   <entry>
-    <title>AI_course</title>
-    <link href="http://example.com/2023/09/22/AI-course/"/>
-    <id>http://example.com/2023/09/22/AI-course/</id>
-    <published>2023-09-22T05:13:52.502Z</published>
-    <updated>2023-09-22T05:13:52.502Z</updated>
+    <title>test_ima</title>
+    <link href="http://example.com/2023/09/22/test-ima/"/>
+    <id>http://example.com/2023/09/22/test-ima/</id>
+    <published>2023-09-22T05:34:02.000Z</published>
+    <updated>2023-09-22T08:06:43.702Z</updated>
     
+    <content type="html"><![CDATA[<p>！<a href="108879310_p0_square1200.jpg"></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;！&lt;a href=&quot;108879310_p0_square1200.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+</summary>
+      
     
     
     
