@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/45074ba5bb641f6dc53536e6471f1fd2.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/891029712402377b772676696ae3ec72.png">
 <meta property="article:published_time" content="2023-09-19T14:04:47.000Z">
-<meta property="article:modified_time" content="2023-09-23T02:49:34.006Z">
+<meta property="article:modified_time" content="2023-09-24T05:21:24.819Z">
 <meta property="article:author" content="Leo Li">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/img_convert/23e5a69cb38d91535b27ab372e689258.png">
@@ -201,7 +201,7 @@
 <p>&lt;scriptsrc&#x3D;”<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js%22%3E">https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js&quot;&gt;</a></script> </p>
 <p>&lt;scriptsrc&#x3D;”<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js%22%3E">https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js&quot;&gt;</a></script> </p>
 
-    <div id="aplayer-FEfnUgRD" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-sTAiAajD" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="9129478" data-server="tencent" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#FF4081"
     ></div>
 <h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38490457/article/details/109257751?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169508142416800222822599%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=169508142416800222822599&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-109257751-null-null.142%5Ev94%5EchatsearchT3_1&utm_term=javascript&spm=1018.2226.3001.4187">参考来源</a></p>
@@ -252,6 +252,120 @@
 <p><img src="https://img-blog.csdnimg.cn/img_convert/891029712402377b772676696ae3ec72.png" alt="result"><br>reverse()方法演示：该方法用来反转数组（前边的去后边，后边的去前边），该方法会直接修改原数组</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&quot;孙悟空&quot;, &quot;猪八戒&quot;, &quot;沙和尚&quot;];</span><br><span class="line">arr.reverse();</span><br><span class="line">console.log(arr);</span><br></pre></td></tr></table></figure>
 <p>sort()方法演示：该方法可以用来对数组中的元素进行排序，也会影响原数组，默认会按照Unicode编码进行排序</p>
+<h4 id="RegExp-正则表达式"><a href="#RegExp-正则表达式" class="headerlink" title="RegExp 正则表达式"></a>RegExp 正则表达式</h4><h5 id="3-6-2-1、使用对象创建"><a href="#3-6-2-1、使用对象创建" class="headerlink" title="3.6.2.1、使用对象创建"></a>3.6.2.1、使用对象创建</h5><p>语法格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var 变量名 = new RegExp(&quot;正则表达式&quot;,&quot;匹配模式&quot;);</span><br></pre></td></tr></table></figure>
+<p>匹配模式：</p>
+<p>i：忽略大小写<br>g：全局匹配模式<br>ig：忽略大小写且全局匹配模式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 这个正则表达式可以来检查一个字符串中是否含有a</span><br><span class="line">var reg = new RegExp(&quot;ab&quot;, &quot;i&quot;);</span><br><span class="line">var str = &quot;Abc&quot;;</span><br><span class="line">var result = reg.test(str);</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+<h5 id="3-6-2-2、使用字面量创建"><a href="#3-6-2-2、使用字面量创建" class="headerlink" title="3.6.2.2、使用字面量创建"></a>3.6.2.2、使用字面量创建</h5><p>语法格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var 变量名 = /正则表达式/匹配模式;</span><br></pre></td></tr></table></figure>
+<p>注意：可以为一个正则表达式设置多个匹配模式，且顺序无所谓</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 这个正则表达式可以来检查一个字符串中是否含有a</span><br><span class="line">var reg = /a/i;</span><br><span class="line">var str = &quot;Abc&quot;;</span><br><span class="line">var result = reg.test(str);</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+<h5 id="3-6-3、正则进阶"><a href="#3-6-3、正则进阶" class="headerlink" title="3.6.3、正则进阶"></a>3.6.3、正则进阶</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 这个正则表达式可以来检查一个字符串中是否含有a</span><br><span class="line">var reg = /a|b|c/;</span><br><span class="line">var str = &quot;Abc&quot;;</span><br><span class="line">var result = reg.test(str);</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 这个正则表达式可以来检查一个字符串中是否含有字母</span><br><span class="line">var reg = /[A-z]/;</span><br><span class="line">var str = &quot;Abc&quot;;</span><br><span class="line">var result = reg.test(str);</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+
+<p>常见组合：</p>
+<p>[a-z]：任意小写字母<br>[A-Z]：任意大写字母<br>[A-z]：任意字母<br>[0-9]：任意数字</p>
+<figure class="highlight plaintext"><figcaption><span>abc 或 adc 或 aec</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 这个正则表达式可以来检查一个字符串中是否含有abc或adc或aec</span><br><span class="line">var reg = /a[bde]c/;</span><br><span class="line">var str = &quot;abc123&quot;;</span><br><span class="line">var result = reg.test(str);</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+<p>判断除了某些字符序列，只需要这么写[^字符序列]<br>常见组合：</p>
+<p>[^a-z]：除了任意小写字母<br>[^A-Z]：除了任意大写字母<br>[^A-z]：除了任意字母<br>[^0-9]：除了任意数字</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 这个正则表达式可以来检查一个字符串中是否除了数字还有其它字母</span><br><span class="line">var reg = /[^0-9]/;</span><br><span class="line">var str = &quot;0123456789&quot;;</span><br><span class="line">var result = reg.test(str);</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+<h5 id="3-6-4、正则方法"><a href="#3-6-4、正则方法" class="headerlink" title="3.6.4、正则方法"></a>3.6.4、正则方法</h5><p>split()方法演示：该方法可以将一个字符串拆分为一个数组，方法中可以传递一个正则表达式作为参数，这样方法将会根据正则表达式去拆分字符串，这个方法即使不指定全局匹配，也会全都插分</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;1a2b3c4d5e6f7&quot;;</span><br><span class="line">var result = str.split(/[A-z]/);</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+<p>search()方法演示：该方法可以搜索字符串中是否含有指定内容，如果搜索到指定内容，则会返回第一次出现的索引，如果没有搜索到返回-1，它可以接受一个正则表达式作为参数，然后会根据正则表达式去检索字符串，serach()只会查找第一个，即使设置全局匹配也没用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;hello abc hello aec afc&quot;;</span><br><span class="line">var result = str.search(/a[bef]c/);</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+<p>match()方法演示：该方法可以根据正则表达式，从一个字符串中将符合条件的内容提取出来，默认情况下我们的match()只会找到第一个符合要求的内容，找到以后就停止检索，我们可以设置正则表达式为全局匹配模式，这样就会匹配到所有的内容，可以为一个正则表达式设置多个匹配模式，且顺序无所谓，match()会将匹配到的内容封装到一个数组中返回，即使只查询到一个结果</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;1a2a3a4a5e6f7A8B9C&quot;;</span><br><span class="line">var result = str.match(/[a-z]/ig);</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+<p>replace()方法演示：该方法可以将字符串中指定内容替换为新的内容，默认只会替换第一个，但是可以设置全局匹配替换全部<br>参数：</p>
+<p>第一个参数：被替换的内容，可以接受一个正则表达式作为参数<br>第二个参数：新的内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;1a2a3a4a5e6f7A8B9C&quot;;</span><br><span class="line">var result = str.replace(/[a-z]/gi, &quot;@_@&quot;);</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+<h5 id="3-6-5、正则量词"><a href="#3-6-5、正则量词" class="headerlink" title="3.6.5、正则量词"></a>3.6.5、正则量词</h5><p>通过量词可以设置一个内容出现的次数，量词只对它前边的一个内容起作用，如果有多个内容可以使用 () 括起来，常见量词如下：</p>
+<p>{n} ：正好出现n次<br>{m,} ：出现m次及以上<br>{m,n} ：出现m-n次</p>
+<ul>
+<li>：至少一个，相当于{1,}</li>
+</ul>
+<ul>
+<li>：0个或多个，相当于{0,}<br>? ：0个或1个，相当于{0,1}<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;abbc&quot;;</span><br><span class="line"></span><br><span class="line">reg = /(ab)&#123;3&#125;/;</span><br><span class="line">console.log(reg.test(str));</span><br><span class="line">console.log(&quot;===============&quot;);</span><br><span class="line">reg = /b&#123;3&#125;/;</span><br><span class="line">console.log(reg.test(str));</span><br><span class="line">console.log(&quot;===============&quot;);</span><br><span class="line">reg = /ab&#123;1,3&#125;c/;</span><br><span class="line">console.log(reg.test(str));</span><br><span class="line">console.log(&quot;===============&quot;);</span><br><span class="line">reg = /ab&#123;3,&#125;c/;</span><br><span class="line">console.log(reg.test(str));</span><br><span class="line">console.log(&quot;===============&quot;);</span><br><span class="line">reg = /ab+c/;</span><br><span class="line">console.log(reg.test(str));</span><br><span class="line">console.log(&quot;===============&quot;);</span><br><span class="line">reg = /ab*c/;</span><br><span class="line">console.log(reg.test(str));</span><br><span class="line">console.log(&quot;===============&quot;);</span><br><span class="line">reg = /ab?c/;</span><br><span class="line">console.log(reg.test(str));</span><br><span class="line">console.log(&quot;===============&quot;);</span><br></pre></td></tr></table></figure>
+f f t f t t f</li>
+</ul>
+<h5 id="3-6-6、正则高阶"><a href="#3-6-6、正则高阶" class="headerlink" title="3.6.6、正则高阶"></a>3.6.6、正则高阶</h5><p>如果我们要检查或者说判断是否以某个字符或者字符序列开头或者结尾就会使用^和$。</p>
+<p>^ ：表示开头，注意它在[^字符序列]表达的意思不一样<br>$ ：表示结尾</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;abcabca&quot;;</span><br><span class="line">var reg = /^a/;</span><br><span class="line">console.log(reg.test(str));</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;abcabca&quot;;</span><br><span class="line">var reg = /a$/;</span><br><span class="line">console.log(reg.test(str));</span><br></pre></td></tr></table></figure>
+<p>如果我们想要检查一个字符串中是否含有.和\就会使用转义字符</p>
+<p>. ：表示.<br>\ ：表示\</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var reg1 = /\./;</span><br><span class="line">var reg2 = /\\/;</span><br><span class="line">var reg3 = new RegExp(&quot;\\.&quot;);</span><br><span class="line">var reg4 = new RegExp(&quot;\\\\&quot;);</span><br></pre></td></tr></table></figure>
+<p>除了以上两种特殊的字符，其实还有很多如下所示：</p>
+<p>\w ：任意字母、数字、<em>，相当于[A-z0-9</em>]<br>\W ：除了字母、数字、<em>，相当于[^A-z0-9</em>]<br>\d ：任意的数字，相当于[0-9]<br>\D ：除了任意的数字，相当于[^0-9]<br>\s ：空格<br>\S ：除了空格<br>\b ：单词边界<br>\B ：除了单词边界</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;  hello child  &quot;</span><br><span class="line">var reg = /^\s*|\s*$/g;</span><br><span class="line">console.log(str);</span><br><span class="line">str = str.replace(reg, &quot;&quot;);</span><br><span class="line">console.log(str);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;hello child&quot;</span><br><span class="line">var reg = /\bchild\b/;</span><br><span class="line">console.log(reg.test(str));</span><br></pre></td></tr></table></figure>
+<h5 id="3-6-7、正则案例"><a href="#3-6-7、正则案例" class="headerlink" title="3.6.7、正则案例"></a>3.6.7、正则案例</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var phoneStr = &quot;15131494600&quot;;</span><br><span class="line">var phoneReg = /^1[3-9][0-9]&#123;9&#125;$/;</span><br><span class="line">console.log(phoneReg.test(phoneStr));</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var emailStr = &quot;abc.def@163.com&quot;;</span><br><span class="line">var emailReg = /^\w&#123;3,&#125;(\.\w+)*@[A-z0-9]+(\.[A-z]&#123;2,5&#125;)&#123;1,2&#125;$/;</span><br><span class="line">console.log(emailReg.test(emailStr));</span><br></pre></td></tr></table></figure>
+<h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h2><h3 id="JavaScript-DOM"><a href="#JavaScript-DOM" class="headerlink" title="JavaScript DOM"></a>JavaScript DOM</h3><p>当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model）。</p>
+<p>HTML DOM 模型被结构化为 对象树<br>常用节点分为四类：</p>
+<p>文档节点：整个HTML文档<br>元素节点：HTML文档中的HTML标签<br>属性节点：元素的属性<br>文本节点：HTML标签中的文本内容</p>
+<h4 id="4-3-1、查找-HTML-元素"><a href="#4-3-1、查找-HTML-元素" class="headerlink" title="4.3.1、查找 HTML 元素"></a>4.3.1、查找 HTML 元素</h4><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>document.getElementById(id)</td>
+<td>通过元素 id 来查找元素.</td>
+</tr>
+<tr>
+<td>document.getElementsByTagName(name)</td>
+<td>通过标签名来查找元素。</td>
+</tr>
+<tr>
+<td>document.getElementsByClassName(name)</td>
+<td>通过类名来查找元素。</td>
+</tr>
+<tr>
+<td>document.querySelector(CSS选择器)</td>
+<td>通过CSS选择器选择一个元素。</td>
+</tr>
+<tr>
+<td>document.querySelectorAll(CSS选择器)</td>
+<td>通过CSS选择器选择多个元素。</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;button id=&quot;btn&quot;&gt;我是按钮&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 在这里写JavaScript代码，因为JavaScript是由上到下执行的 --&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var btn = document.getElementById(&quot;btn&quot;);</span><br><span class="line">    console.log(btn);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;button&gt;我是按钮&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 在这里写JavaScript代码，因为JavaScript是由上到下执行的 --&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var btn = document.getElementsByTagName(&quot;button&quot;);</span><br><span class="line">    console.log(btn);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;button class=&quot;btn&quot;&gt;我是按钮&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 在这里写JavaScript代码，因为JavaScript是由上到下执行的 --&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var btn = document.getElementsByClassName(&quot;btn&quot;);</span><br><span class="line">    console.log(btn);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;button class=&quot;btn&quot;&gt;我是按钮&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 在这里写JavaScript代码，因为JavaScript是由上到下执行的 --&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var btn = document.querySelector(&quot;.btn&quot;);</span><br><span class="line">    console.log(btn);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;ul class=&quot;list&quot;&gt;</span><br><span class="line">    &lt;li&gt;列表项1&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;列表项2&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;列表项3&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;列表项4&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 在这里写JavaScript代码，因为JavaScript是由上到下执行的 --&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var list = document.querySelectorAll(&quot;.list li&quot;);</span><br><span class="line">    console.log(list);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="4-3-2、获取-HTML-的值"><a href="#4-3-2、获取-HTML-的值" class="headerlink" title="4.3.2、获取 HTML 的值"></a>4.3.2、获取 HTML 的值</h4><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>元素节点.innerText</td>
+<td>获取 HTML 元素的 inner Text。</td>
+</tr>
+<tr>
+<td>元素节点.innerHTML</td>
+<td>获取 HTML 元素的 inner HTML。</td>
+</tr>
+<tr>
+<td>元素节点.属性</td>
+<td>获取 HTML 元素的属性值。</td>
+</tr>
+<tr>
+<td>元素节点.getAttribute(attribute)</td>
+<td>获取 HTML 元素的属性值。</td>
+</tr>
+<tr>
+<td>元素节点.style.样式</td>
+<td>获取 HTML 元素的行内样式值。</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;button id=&quot;btn&quot;&gt;我是按钮&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 在这里写JavaScript代码，因为JavaScript是由上到下执行的 --&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var btn = document.getElementById(&quot;btn&quot;);</span><br><span class="line">    console.log(btn.innerText);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
             
         </div>
@@ -431,10 +545,10 @@
             
                 <div>
                     <span class="icon-brush"></span>
-                    2.8k
+                    5.2k
                     &nbsp;|&nbsp;
                     <span class="icon-coffee"></span>
-                    00:13
+                    00:24
                 </div>
             
             
