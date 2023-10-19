@@ -39,10 +39,6 @@
         <link rel="shortcut icon" href="/images/yingwulaopo.ico">
     
     
-        
-<link rel="stylesheet" href="https://unpkg.com/typeface-source-code-pro@1.1.13/index.css">
-
-    
     
 <link rel="stylesheet" href="/css/style.css">
 
@@ -199,15 +195,19 @@
                 
                     
 title: stl_learncover: OIP.jpegtags:##stl fundemental
-1int *p = new int[n]
+int *p = new int[n]
+
 加大储存空间：1.新申请一个较大的内存空间，即执行
-1int * temp = new int[m];
+int * temp = new int[m];
+
 2.将原内存空间的数据全部复制到新申请的内存空间中，即执行
-1memecpy(temp, p, sizeof(int)*n);
+memecpy(temp, p, sizeof(int)*n);
+
 3.将原来的堆空间释放，即执行
-1delete [] p; p = temp;
+delete [] p; p = temp;
+
 当采用stl向量模板类vector实现以上功能：
-1234567891011vector &amp;lt;int&amp;gt; a; //定义 a 数
+vector &amp;lt;int&amp;gt; a; //定义 a 数组，当前数组长度为 0，但
                 
             </article>
         </div>
@@ -232,7 +232,7 @@ title: stl_learncover: OIP.jpegtags:##stl fundemental
             <div class="post-meta">
                 <a><span class="icon-calendar"></span>2023-10-19</a>
                 
-                    <a><span class="icon-pencil"></span>304 字</a>
+                    <a><span class="icon-pencil"></span>310 字</a>
                 
                 
                     <a><span class="icon-clock"></span>1 分钟</a>
@@ -242,10 +242,18 @@ title: stl_learncover: OIP.jpegtags:##stl fundemental
             <article class="post-article">
                 
                     ##指令
-123select student_ID,student_Namefrom student;where student_Name = &amp;#x27;Mary Lamb&amp;#x27;;
-12select distinct student_Name，student_Address//查找可以有重复的，比如同一个人但是住在不同的地方或者同名的人；不能查找unique的元素。from student;
-criteria123select *from studentwhere student_Mobile &amp;gt;111 and student_Age &amp;lt;18;
-not in(‘  ‘,’ 
+select student_ID,student_Name
+from student;
+where student_Name = &amp;#39;Mary Lamb&amp;#39;;
+
+select distinct student_Name，student_Address//查找可以有重复的，比如同一个人但是住在不同的地方或者同名的人；不能查找unique的元素。
+from student;
+
+select *
+from student
+where student_Mobile &amp;gt;111 and student_Age &amp;lt;18;
+
+not in(‘  ‘,’  ‘);betwee
                 
             </article>
         </div>
@@ -269,7 +277,7 @@ not in(‘  ‘,’
             <div class="post-meta">
                 <a><span class="icon-calendar"></span>2023-09-22</a>
                 
-                    <a><span class="icon-pencil"></span>222 字</a>
+                    <a><span class="icon-pencil"></span>221 字</a>
                 
                 
                     <a><span class="icon-clock"></span>1 分钟</a>
@@ -279,7 +287,19 @@ not in(‘  ‘,’
             <article class="post-article">
                 
                     #lab 01##1 
-1234567891011121314int main()&amp;#123;    //array of vectors    int arr[5][2];   //result vector    int result[2]=&amp;#123;0,0&amp;#125;;   for (int i=0;i&amp;lt;5;i++)&amp;#123;        cin&amp;gt;&amp;gt;arr[i][0];//x        result[0]+= arr[i][0];        cin&amp;gt;&amp;gt;arr[i][1];//y        result[1]+=arr[i][1];    &amp;
+int main()
+&amp;#123;
+    //array of vectors
+    int arr[5][2];
+   //result vector
+    int result[2]=&amp;#123;0,0&amp;#125;;
+   for (int i=0;i&amp;lt;5;i++)&amp;#123;
+        cin&amp;gt;&amp;gt;arr[i][0];//x
+        result[0]+= arr[i][0];
+        cin&amp;gt;&amp;gt;arr[i][1];//y
+        result[1]+=arr[i][1];
+    &amp;#125;
+  
                 
             </article>
         </div>
@@ -341,7 +361,7 @@ not in(‘  ‘,’
             <div class="post-meta">
                 <a><span class="icon-calendar"></span>2023-09-19</a>
                 
-                    <a><span class="icon-pencil"></span>4.9k 字</a>
+                    <a><span class="icon-pencil"></span>4.8k 字</a>
                 
                 
                     <a><span class="icon-clock"></span>21 分钟</a>
@@ -390,10 +410,10 @@ not in(‘  ‘,’
                 
                     test教学
 Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &amp;quot;My New Post&amp;quot;
+Quick StartCreate a new post$ hexo new &amp;quot;My New Post&amp;quot;
 
 More info: Writing
-Run server1$ h
+Run server$ hex
                 
             </article>
         </div>
@@ -515,7 +535,7 @@ Run server1$ h
             
                 <div>
                     <span class="icon-brush"></span>
-                    7.2k
+                    7.1k
                     &nbsp;|&nbsp;
                     <span class="icon-coffee"></span>
                     00:32
@@ -672,8 +692,6 @@ Run server1$ h
             <span class="popup-btn-close"></span>
         </div>
     </div>
-    <!-- hexo injector body_end start -->
-<script src="/js/insertHighlight.js"></script>
-<!-- hexo injector body_end end --></body>
+    </body>
     </html>
 
