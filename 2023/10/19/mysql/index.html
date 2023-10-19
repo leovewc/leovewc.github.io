@@ -24,12 +24,12 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="##指令 select student_ID,student_Name from student; where student_Name &#x3D; &#39;Mary Lamb&#39;;  select distinct student_Name，student_Address&#x2F;&#x2F;查找可以有重复的，比如同一个人但是住在不同的地方或者同名的人；不能查找unique的元素。 from student;">
+    <meta name="description" content="##指令 123select student_ID,student_Namefrom student;where student_Name &#x3D; &amp;#x27;Mary Lamb&amp;#x27;; 12select distinct student_Name，student_Address&#x2F;&#x2F;查找可以有重复的，比如同一个人但是住在不同的地方或者同名的人；不能查找unique的元素。from student">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql">
 <meta property="og:url" content="http://example.com/2023/10/19/mysql/index.html">
 <meta property="og:site_name" content="Li Kun">
-<meta property="og:description" content="##指令 select student_ID,student_Name from student; where student_Name &#x3D; &#39;Mary Lamb&#39;;  select distinct student_Name，student_Address&#x2F;&#x2F;查找可以有重复的，比如同一个人但是住在不同的地方或者同名的人；不能查找unique的元素。 from student;">
+<meta property="og:description" content="##指令 123select student_ID,student_Namefrom student;where student_Name &#x3D; &amp;#x27;Mary Lamb&amp;#x27;; 12select distinct student_Name，student_Address&#x2F;&#x2F;查找可以有重复的，比如同一个人但是住在不同的地方或者同名的人；不能查找unique的元素。from student">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-10-19T01:18:32.000Z">
 <meta property="article:modified_time" content="2023-10-19T02:54:11.099Z">
@@ -41,6 +41,10 @@
     
         <link rel="shortcut icon" href="/images/yingwulaopo.ico">
     
+    
+        
+<link rel="stylesheet" href="https://unpkg.com/typeface-source-code-pro@1.1.13/index.css">
+
     
     
 <link rel="stylesheet" href="/css/style.css">
@@ -186,58 +190,26 @@
         <div class="e-content article-entry" itemprop="articleBody">
             
                 <p>##指令</p>
-<pre><code>select student_ID,student_Name
-from student;
-where student_Name = &#39;Mary Lamb&#39;;
-</code></pre>
-<pre><code>select distinct student_Name，student_Address//查找可以有重复的，比如同一个人但是住在不同的地方或者同名的人；不能查找unique的元素。
-from student;
-</code></pre>
-<pre><code class="match">select *
-from student
-where student_Mobile &gt;111 and student_Age &lt;18;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select student_ID,student_Name</span><br><span class="line">from student;</span><br><span class="line">where student_Name = &#x27;Mary Lamb&#x27;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select distinct student_Name，student_Address//查找可以有重复的，比如同一个人但是住在不同的地方或者同名的人；不能查找unique的元素。</span><br><span class="line">from student;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>criteria</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select *</span><br><span class="line">from student</span><br><span class="line">where student_Mobile &gt;111 and student_Age &lt;18;</span><br></pre></td></tr></table></figure>
 <p>not in(‘  ‘,’  ‘);<br>between 1 and 5;(1,2,3,4,5)<br>in(1.5);(1,5)</p>
 <h3 id=""><a href="#" class="headerlink" title="%"></a>%</h3><p>A% &#x3D; A____  例如AHMAD;<br>%A &#x3D; _<em><strong>A  例如SERA；<br>%A% &#x3D; <em>A</em></strong></em>  例如 SEAR；<br>A%A；<br>…</p>
-<pre><code>select *
-from student
-where student_Name like &#39;L%K%&#39;;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select *</span><br><span class="line">from student</span><br><span class="line">where student_Name like &#x27;L%K%&#x27;;</span><br></pre></td></tr></table></figure>
 <p>###group by<br>###join<br>###drop<br>###delete<br>记得删除要加from;<br>安全删除日志或单独的记录，可以复原，不删除表的关系等。而drop会删掉所有的并不能复原；<br>###concat 把两个column合在一起，只是查询临时放在一起</p>
-<pre><code class="select">as&#39;student info&#39;
-from student;
-</code></pre>
-<h3 id="add-datetime-null-default-now"><a href="#add-datetime-null-default-now" class="headerlink" title="add _ datetime null default now()"></a>add _ datetime null default now()</h3><pre><code class="把当前时间加入到表">alter table student
-add student_time datetime null default now();
-</code></pre>
+<figure class="highlight plaintext"><figcaption><span>concat(student_ID,',',student_Name)</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">as&#x27;student info&#x27;</span><br><span class="line">from student;</span><br></pre></td></tr></table></figure>
+<h3 id="add-datetime-null-default-now"><a href="#add-datetime-null-default-now" class="headerlink" title="add _ datetime null default now()"></a>add _ datetime null default now()</h3><figure class="highlight plaintext"><figcaption><span>_ 中</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alter table student</span><br><span class="line">add student_time datetime null default now();</span><br></pre></td></tr></table></figure>
 <p>###insert </p>
-<pre><code>insert into student
-(student_Name,student_Mobile,student_Email,student_ID)
-values
-(&#39;LK&#39;,&#39;0&#39;,&#39;0&#39;,&#39;xmus004&#39;);//加入新人lk
-select * from student
-order by student_ID;//显示顺序
-</code></pre>
-<pre><code class="加column">alter table student
-add DOB date NULL;
-alter table student
-add AGE int null;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">insert into student</span><br><span class="line">(student_Name,student_Mobile,student_Email,student_ID)</span><br><span class="line">values</span><br><span class="line">(&#x27;LK&#x27;,&#x27;0&#x27;,&#x27;0&#x27;,&#x27;xmus004&#x27;);//加入新人lk</span><br><span class="line">select * from student</span><br><span class="line">order by student_ID;//显示顺序</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alter table student</span><br><span class="line">add DOB date NULL;</span><br><span class="line">alter table student</span><br><span class="line">add AGE int null;</span><br></pre></td></tr></table></figure>
 <p>然后设置一个DOB：</p>
-<pre><code>update student
-set DOB = &#39;2020-03-14&#39;
-where student_ID = &#39;xmus002&#39;;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">update student</span><br><span class="line">set DOB = &#x27;2020-03-14&#x27;</span><br><span class="line">where student_ID = &#x27;xmus002&#x27;;</span><br></pre></td></tr></table></figure>
 <p>根据设置的DOB来自动计算人年龄：</p>
-<pre><code>update student
-set AGE =date_format(FROM_DAYS(DATEDIFF(NOW(),DOB)),&#39;%Y&#39;) + 0
-where student_ID between &#39;xmus001&#39; and &#39;xmus004&#39;;
-</code></pre>
-
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">update student</span><br><span class="line">set AGE =date_format(FROM_DAYS(DATEDIFF(NOW(),DOB)),&#x27;%Y&#x27;) + 0</span><br><span class="line">where student_ID between &#x27;xmus001&#x27; and &#x27;xmus004&#x27;;</span><br></pre></td></tr></table></figure>
             
         </div>
         <footer class="article-footer">
-            <a data-url="http://example.com/2023/10/19/mysql/" data-id="clnwnbohl0006ugukaqay1ggp" data-title="mysql"
+            <a data-url="http://example.com/2023/10/19/mysql/" data-id="clnwnebdb0004fgukaev58eo8" data-title="mysql"
                class="article-share-link">分享</a>
             
             
@@ -409,7 +381,7 @@ where student_ID between &#39;xmus001&#39; and &#39;xmus004&#39;;
             
                 <div>
                     <span class="icon-brush"></span>
-                    7.1k
+                    7.2k
                     &nbsp;|&nbsp;
                     <span class="icon-coffee"></span>
                     00:32
@@ -566,6 +538,8 @@ where student_ID between &#39;xmus001&#39; and &#39;xmus004&#39;;
             <span class="popup-btn-close"></span>
         </div>
     </div>
-    </body>
+    <!-- hexo injector body_end start -->
+<script src="/js/insertHighlight.js"></script>
+<!-- hexo injector body_end end --></body>
     </html>
 

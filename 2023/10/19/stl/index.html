@@ -24,12 +24,12 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="title: stl_learncover: OIP.jpegtags:##stl fundemental int *p &#x3D; new int[n]  加大储存空间：1.新申请一个较大的内存空间，即执行 int * temp &#x3D; new int[m];  2.将原内存空间的数据全部复制到新申请的内存空间中，即执行 memecpy(temp, p, sizeof(int)*n);  3.将原来的堆空">
+    <meta name="description" content="title: stl_learncover: OIP.jpegtags:##stl fundemental 1int *p &#x3D; new int[n] 加大储存空间：1.新申请一个较大的内存空间，即执行 1int * temp &#x3D; new int[m]; 2.将原内存空间的数据全部复制到新申请的内存空间中，即执行 1memecpy(temp, p, sizeof(int)*n); 3.将原来的堆空">
 <meta property="og:type" content="article">
 <meta property="og:title" content="stl">
 <meta property="og:url" content="http://example.com/2023/10/19/stl/index.html">
 <meta property="og:site_name" content="Li Kun">
-<meta property="og:description" content="title: stl_learncover: OIP.jpegtags:##stl fundemental int *p &#x3D; new int[n]  加大储存空间：1.新申请一个较大的内存空间，即执行 int * temp &#x3D; new int[m];  2.将原内存空间的数据全部复制到新申请的内存空间中，即执行 memecpy(temp, p, sizeof(int)*n);  3.将原来的堆空">
+<meta property="og:description" content="title: stl_learncover: OIP.jpegtags:##stl fundemental 1int *p &#x3D; new int[n] 加大储存空间：1.新申请一个较大的内存空间，即执行 1int * temp &#x3D; new int[m]; 2.将原内存空间的数据全部复制到新申请的内存空间中，即执行 1memecpy(temp, p, sizeof(int)*n); 3.将原来的堆空">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/stl/1.png">
 <meta property="og:image" content="http://example.com/2.png">
@@ -49,6 +49,10 @@
     
         <link rel="shortcut icon" href="/images/yingwulaopo.ico">
     
+    
+        
+<link rel="stylesheet" href="https://unpkg.com/typeface-source-code-pro@1.1.13/index.css">
+
     
     
 <link rel="stylesheet" href="/css/style.css">
@@ -195,226 +199,35 @@
             
                 <hr>
 <h2 id="title-stl-learncover-OIP-jpegtags"><a href="#title-stl-learncover-OIP-jpegtags" class="headerlink" title="title: stl_learncover: OIP.jpegtags:"></a>title: stl_learn<br>cover: OIP.jpeg<br>tags:</h2><p>##stl fundemental</p>
-<pre><code class="动态数组">int *p = new int[n]
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int *p = new int[n]</span><br></pre></td></tr></table></figure>
 <p>加大储存空间：<br>1.新申请一个较大的内存空间，即执行</p>
-<pre><code>int * temp = new int[m];
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int * temp = new int[m];</span><br></pre></td></tr></table></figure>
 <p>2.将原内存空间的数据全部复制到新申请的内存空间中，即执行</p>
-<pre><code>memecpy(temp, p, sizeof(int)*n);
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">memecpy(temp, p, sizeof(int)*n);</span><br></pre></td></tr></table></figure>
 <p>3.将原来的堆空间释放，即执行</p>
-<pre><code>delete [] p; p = temp;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete [] p; p = temp;</span><br></pre></td></tr></table></figure>
 <p>当采用stl向量模板类vector实现以上功能：</p>
-<pre><code>vector &lt;int&gt; a; //定义 a 数组，当前数组长度为 0，但和普通数组不同的是，此数组 a 可以根据存储数据的数量自动变长。
-//向数组 a 中添加 10 个元素
-for (int i = 0; i &lt; 10 ; i++)
-    a.push_back(i)
-//还可以手动调整数组 a 的大小
-a.resize(100);
-a[90] = 100;
-//还可以直接删除数组 a 中所有的元素，此时 a 的长度变为 0
-a.clear();
-//重新调整 a 的大小为 20，并存储 20 个 -1 元素。
-a.resize(20, -1)
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vector &lt;int&gt; a; //定义 a 数组，当前数组长度为 0，但和普通数组不同的是，此数组 a 可以根据存储数据的数量自动变长。</span><br><span class="line">//向数组 a 中添加 10 个元素</span><br><span class="line">for (int i = 0; i &lt; 10 ; i++)</span><br><span class="line">    a.push_back(i)</span><br><span class="line">//还可以手动调整数组 a 的大小</span><br><span class="line">a.resize(100);</span><br><span class="line">a[90] = 100;</span><br><span class="line">//还可以直接删除数组 a 中所有的元素，此时 a 的长度变为 0</span><br><span class="line">a.clear();</span><br><span class="line">//重新调整 a 的大小为 20，并存储 20 个 -1 元素。</span><br><span class="line">a.resize(20, -1)</span><br></pre></td></tr></table></figure>
 <p>push_back( ) 成员函数在向量的末尾插入值，如果有必要会扩展向量的大小。<br>size( ) 函数显示向量的大小。<br>begin( ) 函数返回一个指向向量开头的迭代器。<br>end( ) 函数返回一个指向向量末尾的迭代器。<br>###泛型</p>
-<pre><code>T maxt(T x, T y)&#123;
-      return (x&gt;y)?x :y;
-&#125;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">T maxt(T x, T y)&#123;</span><br><span class="line">      return (x&gt;y)?x :y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>T 是占位符，为泛型<br>##vector</p>
-<pre><code>#define _CRT_SECURE_NO_WARNINGS
-#include&lt;iostream&gt;
-#include&lt;vector&gt;
-#include&lt;algorithm&gt;
-using namespace std;
- 
-//STL 中的容器 算法 迭代器
-void test01()
-&#123;
-    vector&lt;int&gt; v; //STL 中的标准容器之一 ：动态数组
-    v.push_back(1); //vector 容器提供的插入数据的方法
-    v.push_back(5);
-    v.push_back(3);
-    v.push_back(7);
-    //迭代器
-    vector&lt;int&gt;::iterator pStart = v.begin(); //vector 容器提供了 begin()方法 返回指向第一个元素的迭代器
-    vector&lt;int&gt;::iterator pEnd = v.end(); //vector 容器提供了 end()方法 返回指向最后一个元素下一个位置的迭代器
-    //通过迭代器遍历
-    while (pStart != pEnd)&#123;
-        cout &lt;&lt; *pStart &lt;&lt; &quot; &quot;;
-        pStart++;
-    &#125;
-    cout &lt;&lt; endl;
-    //算法 count 算法 用于统计元素的个数
-    int n = count(pStart, pEnd, 5);
-    cout &lt;&lt; &quot;n:&quot; &lt;&lt; n &lt;&lt; endl;
-&#125;
-//STL 容器不单单可以存储基础数据类型，也可以存储类对象
-class Teacher
-&#123;
-public:
-    Teacher(int age) :age(age)&#123;&#125;;
-    ~Teacher()&#123;&#125;;
-public:
-    int age;
-&#125;;
-void test02()&#123;
-    vector&lt;Teacher&gt; v; //存储 Teacher 类型数据的容器
-    Teacher t1(10), t2(20), t3(30);
-    v.push_back(t1);
-    v.push_back(t2);
-    v.push_back(t3);
-    vector&lt;Teacher&gt;::iterator pStart = v.begin();
-    vector&lt;Teacher&gt;::iterator pEnd = v.end();
-    //通过迭代器遍历
-    while (pStart != pEnd)&#123;
-        cout &lt;&lt; pStart-&gt;age &lt;&lt; &quot; &quot;;
-        pStart++;
-    &#125;
-    cout &lt;&lt; endl;
-&#125;
-//存储 Teacher 类型指针
-void test03()
-&#123;
-    vector&lt;Teacher*&gt; v; //存储 Teacher 类型指针
-    Teacher* t1 = new Teacher(10);
-    Teacher* t2 = new Teacher(20);
-    Teacher* t3 = new Teacher(30);
-    v.push_back(t1);
-    v.push_back(t2);
-    v.push_back(t3);
-    //拿到容器迭代器
-    vector&lt;Teacher*&gt;::iterator pStart = v.begin();
-    vector&lt;Teacher*&gt;::iterator pEnd = v.end();
-    //通过迭代器遍历
-    while (pStart != pEnd)&#123;
-        cout &lt;&lt; (*pStart)-&gt;age &lt;&lt; &quot; &quot;;
-        pStart++;
-    &#125;
-    cout &lt;&lt; endl;
-&#125;
-//容器嵌套容器 难点
-void test04()
-&#123;
-    vector&lt; vector&lt;int&gt; &gt; v;
-    vector&lt;int&gt;v1;
-    vector&lt;int&gt;v2;
-    vector&lt;int&gt;v3;
- 
-    for (int i = 0; i &lt; 5;i++)
-    &#123;
-        v1.push_back(i);
-        v2.push_back(i * 10);
-        v3.push_back(i * 100);
-    &#125;
-    v.push_back(v1);
-    v.push_back(v2);
-    v.push_back(v3);
- 
-    for (vector&lt; vector&lt;int&gt; &gt;::iterator it = v.begin(); it != v.end();it++)
-    &#123;
-        for (vector&lt;int&gt;::iterator subIt = (*it).begin(); subIt != (*it).end(); subIt ++)
-        &#123;
-            cout &lt;&lt; *subIt &lt;&lt; &quot; &quot;;
-        &#125;
-        cout &lt;&lt; endl;
-    &#125;
-&#125; 
-int main()
-&#123;
-    //test01();
-    //test02();
-    //test03();
-    test04();
-    system(&quot;pause&quot;);
-    return EXIT_SUCCESS;
-&#125;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line">#define _CRT_SECURE_NO_WARNINGS</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">//STL 中的容器 算法 迭代器</span><br><span class="line">void test01()</span><br><span class="line">&#123;</span><br><span class="line">    vector&lt;int&gt; v; //STL 中的标准容器之一 ：动态数组</span><br><span class="line">    v.push_back(1); //vector 容器提供的插入数据的方法</span><br><span class="line">    v.push_back(5);</span><br><span class="line">    v.push_back(3);</span><br><span class="line">    v.push_back(7);</span><br><span class="line">    //迭代器</span><br><span class="line">    vector&lt;int&gt;::iterator pStart = v.begin(); //vector 容器提供了 begin()方法 返回指向第一个元素的迭代器</span><br><span class="line">    vector&lt;int&gt;::iterator pEnd = v.end(); //vector 容器提供了 end()方法 返回指向最后一个元素下一个位置的迭代器</span><br><span class="line">    //通过迭代器遍历</span><br><span class="line">    while (pStart != pEnd)&#123;</span><br><span class="line">        cout &lt;&lt; *pStart &lt;&lt; &quot; &quot;;</span><br><span class="line">        pStart++;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    //算法 count 算法 用于统计元素的个数</span><br><span class="line">    int n = count(pStart, pEnd, 5);</span><br><span class="line">    cout &lt;&lt; &quot;n:&quot; &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line">//STL 容器不单单可以存储基础数据类型，也可以存储类对象</span><br><span class="line">class Teacher</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    Teacher(int age) :age(age)&#123;&#125;;</span><br><span class="line">    ~Teacher()&#123;&#125;;</span><br><span class="line">public:</span><br><span class="line">    int age;</span><br><span class="line">&#125;;</span><br><span class="line">void test02()&#123;</span><br><span class="line">    vector&lt;Teacher&gt; v; //存储 Teacher 类型数据的容器</span><br><span class="line">    Teacher t1(10), t2(20), t3(30);</span><br><span class="line">    v.push_back(t1);</span><br><span class="line">    v.push_back(t2);</span><br><span class="line">    v.push_back(t3);</span><br><span class="line">    vector&lt;Teacher&gt;::iterator pStart = v.begin();</span><br><span class="line">    vector&lt;Teacher&gt;::iterator pEnd = v.end();</span><br><span class="line">    //通过迭代器遍历</span><br><span class="line">    while (pStart != pEnd)&#123;</span><br><span class="line">        cout &lt;&lt; pStart-&gt;age &lt;&lt; &quot; &quot;;</span><br><span class="line">        pStart++;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line">//存储 Teacher 类型指针</span><br><span class="line">void test03()</span><br><span class="line">&#123;</span><br><span class="line">    vector&lt;Teacher*&gt; v; //存储 Teacher 类型指针</span><br><span class="line">    Teacher* t1 = new Teacher(10);</span><br><span class="line">    Teacher* t2 = new Teacher(20);</span><br><span class="line">    Teacher* t3 = new Teacher(30);</span><br><span class="line">    v.push_back(t1);</span><br><span class="line">    v.push_back(t2);</span><br><span class="line">    v.push_back(t3);</span><br><span class="line">    //拿到容器迭代器</span><br><span class="line">    vector&lt;Teacher*&gt;::iterator pStart = v.begin();</span><br><span class="line">    vector&lt;Teacher*&gt;::iterator pEnd = v.end();</span><br><span class="line">    //通过迭代器遍历</span><br><span class="line">    while (pStart != pEnd)&#123;</span><br><span class="line">        cout &lt;&lt; (*pStart)-&gt;age &lt;&lt; &quot; &quot;;</span><br><span class="line">        pStart++;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line">//容器嵌套容器 难点</span><br><span class="line">void test04()</span><br><span class="line">&#123;</span><br><span class="line">    vector&lt; vector&lt;int&gt; &gt; v;</span><br><span class="line">    vector&lt;int&gt;v1;</span><br><span class="line">    vector&lt;int&gt;v2;</span><br><span class="line">    vector&lt;int&gt;v3;</span><br><span class="line"> </span><br><span class="line">    for (int i = 0; i &lt; 5;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        v1.push_back(i);</span><br><span class="line">        v2.push_back(i * 10);</span><br><span class="line">        v3.push_back(i * 100);</span><br><span class="line">    &#125;</span><br><span class="line">    v.push_back(v1);</span><br><span class="line">    v.push_back(v2);</span><br><span class="line">    v.push_back(v3);</span><br><span class="line"> </span><br><span class="line">    for (vector&lt; vector&lt;int&gt; &gt;::iterator it = v.begin(); it != v.end();it++)</span><br><span class="line">    &#123;</span><br><span class="line">        for (vector&lt;int&gt;::iterator subIt = (*it).begin(); subIt != (*it).end(); subIt ++)</span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; *subIt &lt;&lt; &quot; &quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    //test01();</span><br><span class="line">    //test02();</span><br><span class="line">    //test03();</span><br><span class="line">    test04();</span><br><span class="line">    system(&quot;pause&quot;);</span><br><span class="line">    return EXIT_SUCCESS;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>##deque容器<br>deque容器是连续的空间，至少逻辑上看来如此，连续现行空间总是令我们联想到array和vector,array无法成长，vector虽可成长，却只能向尾端成长，而且其成长其实是一个假象，事实上(1) 申请更大空间 (2)原数据复制新空间 (3)释放原空间 三步骤，如果不是vector每次配置新的空间时都留有余裕，其成长假象所带来的代价是非常昂贵的。</p>
 <p>deque是由一段一段的定量的连续空间构成。一旦有必要在deque前端或者尾端增加新的空间，便配置一段连续定量的空间，串接在deque的头端或者尾端。Deque最大的工作就是维护这些分段连续的内存空间的整体性的假象，并提供随机存取的接口，避开了重新配置空间，复制，释放的轮回，代价就是复杂的迭代器架构。<br>既然deque是分段连续内存空间，那么就必须有中央控制，维持整体连续的假象，数据结构的设计及迭代器的前进后退操作颇为繁琐。Deque代码的实现远比vector或list都多得多。</p>
 <p><img src="/./stl/1.png"><br><img src="/2.png"><br><img src="/3.png"><br><img src="/4.png"><br><img src="/5.png"></p>
 <p>##stack<br><img src="/stack1.png"></p>
 <h2 id="queue"><a href="#queue" class="headerlink" title="queue"></a>queue</h2><p><img src="/queue1.png"></p>
 <p>##list<br>双向链表</p>
-<pre><code>#include&lt;algorithm&gt;
-#include&lt;iostream&gt;
-#include&lt;vector&gt;
-using namespace std;
-struct ListNode
-&#123;
-    int data;
-    ListNode* next;//结构体指针
-&#125;;
-void Listprintf(ListNode* phead)
-&#123;
-    ListNode* cur=phead;
-    while (cur != NULL)
-    &#123;
-        cout &lt;&lt; cur-&gt;data &lt;&lt; &quot;-&gt;&quot;;
-        cur = cur-&gt;next;
-    &#125;
-&#125;
-void Listpushback(ListNode** pphead, int x)
-&#123;
-    ListNode* newnode = new ListNode&#123; x,NULL &#125;;
-    if (*pphead == NULL)
-    &#123;
-        *pphead = newnode;
-    &#125;
-    else
-    &#123;
-        ListNode* tail=  *pphead;
-        while(tail-&gt;next != NULL)
-        &#123;
-            tail = tail-&gt;next;
-        &#125;
-        tail-&gt;next = newnode;
-    &#125;
-&#125;
-void test_1()
-&#123;
-    ListNode* phead = NULL;
-    Listpushback(&amp;phead, 1);
-    Listpushback(&amp;phead, 2);
-    Listpushback(&amp;phead, 3); 
-    Listprintf(phead);
-&#125;
-int main()
-&#123;
-    test_1();
-    return 0;
-&#125;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">struct ListNode</span><br><span class="line">&#123;</span><br><span class="line">	int data;</span><br><span class="line">	ListNode* next;//结构体指针</span><br><span class="line">&#125;;</span><br><span class="line">void Listprintf(ListNode* phead)</span><br><span class="line">&#123;</span><br><span class="line">	ListNode* cur=phead;</span><br><span class="line">	while (cur != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; cur-&gt;data &lt;&lt; &quot;-&gt;&quot;;</span><br><span class="line">		cur = cur-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void Listpushback(ListNode** pphead, int x)</span><br><span class="line">&#123;</span><br><span class="line">	ListNode* newnode = new ListNode&#123; x,NULL &#125;;</span><br><span class="line">	if (*pphead == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		*pphead = newnode;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		ListNode* tail=  *pphead;</span><br><span class="line">		while(tail-&gt;next != NULL)</span><br><span class="line">		&#123;</span><br><span class="line">			tail = tail-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">		tail-&gt;next = newnode;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void test_1()</span><br><span class="line">&#123;</span><br><span class="line">	ListNode* phead = NULL;</span><br><span class="line">	Listpushback(&amp;phead, 1);</span><br><span class="line">	Listpushback(&amp;phead, 2);</span><br><span class="line">	Listpushback(&amp;phead, 3); </span><br><span class="line">	Listprintf(phead);</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	test_1();</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>##二叉树</p>
-<pre><code>//二叉树的节点
-class Linknode
-&#123;
-public：
-    linknode(); //构造函数
-    int data;
-    Linknode* left; //左节点
-    Linknode* right;  //右节点	
-&#125;;
-Linknode::linknode()
-&#123;
-    left =NULL;
-    right =Null;
-&#125;
-class Tree
-&#123;
-    Linknode* root; //创建二叉树的根
-    
-&#125;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//二叉树的节点</span><br><span class="line">class Linknode</span><br><span class="line">&#123;</span><br><span class="line">public：</span><br><span class="line">    linknode(); //构造函数</span><br><span class="line">    int data;</span><br><span class="line">    Linknode* left; //左节点</span><br><span class="line">    Linknode* right;  //右节点	</span><br><span class="line">&#125;;</span><br><span class="line">Linknode::linknode()</span><br><span class="line">&#123;</span><br><span class="line">	left =NULL;</span><br><span class="line">	right =Null;</span><br><span class="line">&#125;</span><br><span class="line">class Tree</span><br><span class="line">&#123;</span><br><span class="line">	Linknode* root; //创建二叉树的根</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>##map<br>map的特性是，所有元素都会根据元素的键值自动排序。<br>map所有的元素都是关联的,同时拥有实值和键值（key,value），第一元素被视为键值，第二元素被视为实值，map不允许两个元素有相同的键值.<br>map中的key是唯一的。集合中元素按照一定顺序排列。元素的插入按照规则插入我，所以不能指定插入位置。<br>map的底层是红黑树的变体，平衡二叉树。在插入操作、删除和检索上要比vector快很多。<br>map可以直接存取key所对应的value，支持[]操作符，如map[key]&#x3D;value.<br>#include<map><br>map支持唯一键值，每个键只能出现一次；而multimap中相同键可以出现多次。multimap不支持[]操作符<br>###map和set的区别是：<br>Map对象保存键值对。任何值(对象或者原始值) 都可以作为一个键或一个值。构造函数Map可以接受一个数组作为参数。<br>Set对象允许你存储任何类型的值，无论是原始值或者是对象引用。它类似于数组，但是成员的值都是唯一的，没有重复的值。</p>
 
             
         </div>
         <footer class="article-footer">
-            <a data-url="http://example.com/2023/10/19/stl/" data-id="clnwnbohm0008uguk0t5q16la" data-title="stl"
+            <a data-url="http://example.com/2023/10/19/stl/" data-id="clnwnebdc0005fguke38s95o1" data-title="stl"
                class="article-share-link">分享</a>
             
             
@@ -572,7 +385,7 @@ class Tree
             
                 <div>
                     <span class="icon-brush"></span>
-                    7.1k
+                    7.2k
                     &nbsp;|&nbsp;
                     <span class="icon-coffee"></span>
                     00:32
@@ -729,6 +542,8 @@ class Tree
             <span class="popup-btn-close"></span>
         </div>
     </div>
-    </body>
+    <!-- hexo injector body_end start -->
+<script src="/js/insertHighlight.js"></script>
+<!-- hexo injector body_end end --></body>
     </html>
 
