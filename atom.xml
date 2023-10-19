@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-10-18T10:14:56.492Z</updated>
+  <updated>2023-10-19T01:26:06.745Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>page</title>
-    <link href="http://example.com/2023/10/18/page/"/>
-    <id>http://example.com/2023/10/18/page/</id>
-    <published>2023-10-18T10:14:56.000Z</published>
-    <updated>2023-10-18T10:14:56.492Z</updated>
+    <title>mysql</title>
+    <link href="http://example.com/2023/10/19/mysql/"/>
+    <id>http://example.com/2023/10/19/mysql/</id>
+    <published>2023-10-19T01:18:32.000Z</published>
+    <updated>2023-10-19T01:26:06.745Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>##指令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select student_ID,student_Name</span><br><span class="line">from student;</span><br><span class="line">where student_Name = &#x27;Mary Lamb&#x27;;</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select distinct student_Name，student_Address//查找可以有重复的，比如同一个人但是住在不同的地方或者同名的人；不能查找unique的元素。</span><br><span class="line">from student;</span><br></pre></td></tr></table></figure><pre><code class="match"></code></pre>]]></content>
     
     
       
