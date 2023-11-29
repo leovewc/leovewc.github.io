@@ -1,29 +1,21 @@
 
-    <!DOCTYPE html>
-    <html lang="zh-CN"
-            
-          data-theme="dark"
-            
-    >
-    <head>
-    <meta charset="utf-8">
-    
 
-    
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
 
-    
-    <title>
-        mysql |
-        
-        Li Kun</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CUbuntu%20Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-    
-<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/v4-font-face.min.css">
 
-    
-<link rel="stylesheet" href="/css/loader.css">
 
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Leo Li">
+  <meta name="keywords" content="">
+  
     <meta name="description" content="指令123select student_ID,student_Namefrom student;where student_Name &#x3D; &amp;#x27;Mary Lamb&amp;#x27;; 12select distinct student_Name，student_Address&#x2F;&#x2F;查找可以有重复的，比如同一个人但是住在不同的地方或者同名的人；不能查找unique的元素。from student; c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql">
@@ -32,557 +24,667 @@
 <meta property="og:description" content="指令123select student_ID,student_Namefrom student;where student_Name &#x3D; &amp;#x27;Mary Lamb&amp;#x27;; 12select distinct student_Name，student_Address&#x2F;&#x2F;查找可以有重复的，比如同一个人但是住在不同的地方或者同名的人；不能查找unique的元素。from student; c">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-10-19T01:18:32.000Z">
-<meta property="article:modified_time" content="2023-11-16T02:54:39.445Z">
+<meta property="article:modified_time" content="2023-11-23T03:23:16.600Z">
 <meta property="article:author" content="Leo Li">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>mysql - Li Kun</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Li Kun" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
     
-        <link rel="alternate" href="/atom.xml" title="Li Kun" type="application/atom+xml">
-    
-    
-        <link rel="shortcut icon" href="/images/yingwulaopo.ico">
-    
-    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-<link rel="stylesheet" href="https://unpkg.com/typeface-source-code-pro@1.1.13/index.css">
-
-    
-    
-<link rel="stylesheet" href="/css/style.css">
-
-    
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
         
-<link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-
-    
-    
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
         
-<link rel="stylesheet" href="https://unpkg.com/katex@0.16.7/dist/katex.min.css">
-
-    
-    
-    
-    
-<script src="https://unpkg.com/pace-js@1.2.4/pace.min.js"></script>
-
-    
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
         
-<link rel="stylesheet" href="https://unpkg.com/wowjs@1.1.3/css/libs/animate.css">
-
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
         
-<script src="https://unpkg.com/wowjs@1.1.3/dist/wow.min.js"></script>
-
-        <script>
-          new WOW({
-            offset: 0,
-            mobile: true,
-            live: false
-          }).init();
-        </script>
-    
-<meta name="generator" content="Hexo 6.3.0"></head>
-
-    <body>
-    
-<div id='loader'>
-  <div class="loading-left-bg"></div>
-  <div class="loading-right-bg"></div>
-  <div class="spinner-box">
-    <div class="loading-taichi">
-      <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
-      <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="#ff6e6b" />
-      <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z" fill="#fd0d00" />
-      <path d="M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95" fill="#fd0d00" />
-    </svg>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
     </div>
-    <div class="loading-word">鸡鸡女王的宝藏不是这麽容易打开的。。。</div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="mysql"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-10-19 09:18" pubdate>
+          2023年10月19日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          13k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          109 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
   </div>
 </div>
+
 </div>
 
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">mysql</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs axapta"><span class="hljs-keyword">select</span> student_ID,student_Name<br><span class="hljs-keyword">from</span> student;<br><span class="hljs-keyword">where</span> student_Name = <span class="hljs-string">&#x27;Mary Lamb&#x27;</span>;<br></code></pre></td></tr></table></figure>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs n1ql"><span class="hljs-keyword">select</span> <span class="hljs-keyword">distinct</span> student_Name，student_Address//查找可以有重复的，比如同一个人但是住在不同的地方或者同名的人；不能查找<span class="hljs-keyword">unique</span>的元素。<br><span class="hljs-keyword">from</span> student;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>criteria</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs match">select *<br>from student<br>where student_Mobile &gt;111 and student_Age &lt;18;<br></code></pre></td></tr></table></figure>
+<p>not in(‘  ‘,’  ‘);<br>between 1 and 5;(1,2,3,4,5)<br>in(1,5);(1,5)</p>
+<h3 id=""><a href="#" class="headerlink" title="%"></a>%</h3><p>A% &#x3D; A____  例如AHMAD;<br>%A &#x3D; _<em><strong>A  例如SERA；<br>%A% &#x3D; <em>A</em></strong></em>  例如 SEAR；<br>A%A；<br>…</p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs axapta"><span class="hljs-keyword">select</span> *<br><span class="hljs-keyword">from</span> student<br><span class="hljs-keyword">where</span> student_Name <span class="hljs-keyword">like</span> <span class="hljs-string">&#x27;L%K%&#x27;</span>;<br></code></pre></td></tr></table></figure>
+<h3 id="group-by"><a href="#group-by" class="headerlink" title="group by"></a>group by</h3><h3 id="join"><a href="#join" class="headerlink" title="join"></a>join</h3><h3 id="drop"><a href="#drop" class="headerlink" title="drop"></a>drop</h3><h3 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h3><p>记得删除要加from;<br>安全删除日志或单独的记录，可以复原，不删除表的关系等。而drop会删掉所有的并不能复原；</p>
+<h3 id="concat-把两个column合在一起，只是查询临时放在一起"><a href="#concat-把两个column合在一起，只是查询临时放在一起" class="headerlink" title="concat 把两个column合在一起，只是查询临时放在一起"></a>concat 把两个column合在一起，只是查询临时放在一起</h3><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs oxygene"><span class="hljs-keyword">select</span> <span class="hljs-keyword">concat</span>(student_ID,<span class="hljs-string">&#x27;,&#x27;</span>,student_Name)<span class="hljs-keyword">as</span><span class="hljs-string">&#x27;student info&#x27;</span><br><span class="hljs-keyword">from</span> student<span class="hljs-punctuation">;</span><br></code></pre></td></tr></table></figure>
+<h3 id="add-datetime-null-default-now"><a href="#add-datetime-null-default-now" class="headerlink" title="add _ datetime null default now()"></a>add _ datetime null default now()</h3><figure class="highlight plaintext"><figcaption><span>_ 中</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs 把当前时间加入到表">alter table student<br>add student_time datetime null default now();<br></code></pre></td></tr></table></figure>
+<h3 id="insert"><a href="#insert" class="headerlink" title="insert"></a>insert</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-function">insert <span class="hljs-keyword">into</span> <span class="hljs-title">student</span></span><br><span class="hljs-function">(<span class="hljs-params">student_Name,student_Mobile,student_Email,student_ID</span>)</span><br><span class="hljs-function"><span class="hljs-title">values</span></span><br><span class="hljs-function">(<span class="hljs-params"><span class="hljs-string">&#x27;LK&#x27;</span>,<span class="hljs-string">&#x27;0&#x27;</span>,<span class="hljs-string">&#x27;0&#x27;</span>,<span class="hljs-string">&#x27;xmus004&#x27;</span></span>)</span>;<span class="hljs-comment">//加入新人lk</span><br><span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> student<br>order <span class="hljs-keyword">by</span> student_ID;<span class="hljs-comment">//显示顺序</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs 加column">alter table student<br>add DOB date NULL;<br>alter table student<br>add AGE int null;<br></code></pre></td></tr></table></figure>
+<p>然后设置一个DOB：</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs gams">update student<br><span class="hljs-keyword">set</span> DOB <span class="hljs-comment">=</span> <span class="hljs-comment">&#x27;2020-03-14&#x27;</span><br>where <span class="hljs-comment">student_ID =</span> <span class="hljs-comment">&#x27;xmus002&#x27;</span>;<br></code></pre></td></tr></table></figure>
+<p>根据设置的DOB来自动计算人年龄：</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">update</span> student<br><span class="hljs-keyword">set</span> AGE =date_format(FROM_DAYS(DATEDIFF(NOW(),DOB)),<span class="hljs-string">&#x27;%Y&#x27;</span>) + <span class="hljs-number">0</span><br><span class="hljs-keyword">where</span> student_ID <span class="hljs-keyword">between</span> <span class="hljs-string">&#x27;xmus001&#x27;</span> <span class="hljs-keyword">and</span> <span class="hljs-string">&#x27;xmus004&#x27;</span>;<br></code></pre></td></tr></table></figure>
+<h2 id="第6周作业"><a href="#第6周作业" class="headerlink" title="第6周作业"></a>第6周作业</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs n1ql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">database</span> shop;<br></code></pre></td></tr></table></figure>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf">use shop<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> customer<br>(<br>customerID <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span> <span class="hljs-keyword">primary</span> key,<br>FirstName <span class="hljs-type">varchar</span>(<span class="hljs-number">20</span>) <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span>,<br>LastName <span class="hljs-type">varchar</span>(<span class="hljs-number">20</span>) <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span>,<br>DateofBirth <span class="hljs-type">date</span> <span class="hljs-keyword">null</span>,<br>street <span class="hljs-type">varchar</span>(<span class="hljs-number">20</span>) <span class="hljs-keyword">null</span>,<br>city <span class="hljs-type">varchar</span>(<span class="hljs-number">20</span>) <span class="hljs-keyword">null</span>,<br>state <span class="hljs-type">varchar</span>(<span class="hljs-number">20</span>) <span class="hljs-keyword">null</span>,<br>MobileNo <span class="hljs-type">int</span> <span class="hljs-keyword">null</span><br>);<br></code></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> item<br>(<br>ItemID <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span> <span class="hljs-keyword">primary</span> key,<br>ItemName <span class="hljs-type">varchar</span>(<span class="hljs-number">20</span>) <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span>,<br>Price <span class="hljs-type">decimal</span>(<span class="hljs-number">10</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">null</span>,<br>Brand <span class="hljs-type">varchar</span>(<span class="hljs-number">20</span>) <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span><br>);<br></code></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> salesman<br>(<br>StaffID <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span> <span class="hljs-keyword">primary</span> key,<br>StaffName <span class="hljs-type">varchar</span>(<span class="hljs-number">20</span>) <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span>,<br>WorkingDate <span class="hljs-type">date</span> <span class="hljs-keyword">null</span>,<br>Salary <span class="hljs-type">decimal</span>(<span class="hljs-number">10</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">null</span><br>);<br></code></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">transaction</span><br>(<br>InvoiceNo <span class="hljs-type">int</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span> <span class="hljs-keyword">primary key</span>,<br>CustomeID <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span>,     //<span class="hljs-keyword">primary key</span> 和 forigen key 都不能为<span class="hljs-keyword">null</span><br>ItemID <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span>,<br>StaffID <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span>,<br>Quantity <span class="hljs-type">int</span> <span class="hljs-keyword">null</span>,<br>TotalAmount <span class="hljs-type">decimal</span>(<span class="hljs-number">10</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">null</span>,<br><span class="hljs-keyword">Foreign Key</span> fk_transaction_CustomerID(customeID) <span class="hljs-keyword">references</span> Customer(customerID),//不用区分大小写<br><span class="hljs-keyword">Foreign Key</span> fk_transaction_ItemID(ItemID) <span class="hljs-keyword">references</span> item(ItemID),<br><span class="hljs-keyword">Foreign Key</span> fk_transaction_StaffID(staffID) <span class="hljs-keyword">references</span> salesman(staffID)<br>);<br></code></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs 1c">insert into Customer<br>(customerID, FirstName,LastName,DateofBirth,Street,City,state,MobileNo)<br>values<br>(&#x27;C001&#x27;,&#x27;Britney&#x27;,&#x27;Spears&#x27;,&#x27;<span class="hljs-number">2020-10-04</span>&#x27;,&#x27;2nd Street&#x27;,&#x27;Sepang&#x27;,&#x27;Selangor&#x27;,&#x27;<span class="hljs-number">09222333</span>&#x27;),<br>(&#x27;C002&#x27;,&#x27;Britney&#x27;,&#x27;Jackson&#x27;,&#x27;<span class="hljs-number">2007-06-04</span>&#x27;,&#x27;3rd Street&#x27;,&#x27;Shah Alam&#x27;,&#x27;Selangor&#x27;,&#x27;<span class="hljs-number">01944433</span>3&#x27;),<br>(&#x27;C003&#x27;,&#x27;John&#x27;,&#x27;Wick&#x27;,&#x27;<span class="hljs-number">1996-04-07</span>&#x27;,&#x27;2nd Level&#x27;,&#x27;Butterworth&#x27;,&#x27;Penang&#x27;,&#x27;<span class="hljs-number">01999933</span>3&#x27;),<br>(&#x27;C004&#x27;,&#x27;John&#x27;,&#x27;Cena&#x27;,&#x27;<span class="hljs-number">1990-03-03</span>&#x27;,&#x27;3rd Floor&#x27;,&#x27;Georgetown&#x27;,&#x27;Penang&#x27;,&#x27;<span class="hljs-number">01222233</span>3&#x27;),<br>(&#x27;C005&#x27;,&#x27;Elizabeth&#x27;,&#x27;Stone&#x27;,&#x27;<span class="hljs-number">1985-04-03</span>&#x27;,&#x27;4th Street&#x27;,&#x27;Sepang&#x27;,&#x27;Selangor&#x27;,&#x27;<span class="hljs-number">01256733</span>3&#x27;),<br>(&#x27;C006&#x27;,&#x27;Jimmy&#x27;,&#x27;Stone&#x27;,&#x27;<span class="hljs-number">2002-10-03</span>&#x27;,&#x27;2nd Street&#x27;,&#x27;Shah Alam&#x27;,&#x27;Selangor&#x27;,&#x27;<span class="hljs-number">01922443</span>3&#x27;),<br>(&#x27;C007&#x27;,&#x27;Justin&#x27;,&#x27;Timerlake&#x27;,&#x27;<span class="hljs-number">2015-06-04</span>&#x27;,&#x27;2nd Street&#x27;,&#x27;Shah Alam&#x27;,&#x27;Selangor&#x27;,&#x27;<span class="hljs-number">01944433</span>3&#x27;);<br></code></pre></td></tr></table></figure>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs n1ql"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> Item<br>(ItemID, ItemName,Price,Brand)<br><span class="hljs-keyword">values</span><br>(<span class="hljs-string">&#x27;I001&#x27;</span>,<span class="hljs-string">&#x27;Laptop&#x27;</span>,<span class="hljs-string">&#x27;1500&#x27;</span>,<span class="hljs-string">&#x27;Huawei&#x27;</span>),<br>(<span class="hljs-string">&#x27;I002&#x27;</span>,<span class="hljs-string">&#x27;Laptop&#x27;</span>,<span class="hljs-string">&#x27;1700&#x27;</span>,<span class="hljs-string">&#x27;Dell&#x27;</span>),<br>(<span class="hljs-string">&#x27;I003&#x27;</span>,<span class="hljs-string">&#x27;Laptop&#x27;</span>,<span class="hljs-string">&#x27;3500&#x27;</span>,<span class="hljs-string">&#x27;Apple&#x27;</span>),<br>(<span class="hljs-string">&#x27;I004&#x27;</span>,<span class="hljs-string">&#x27;Tablet&#x27;</span>,<span class="hljs-string">&#x27;800&#x27;</span>,<span class="hljs-string">&#x27;Apple&#x27;</span>),<br>(<span class="hljs-string">&#x27;I005&#x27;</span>,<span class="hljs-string">&#x27;Tablet&#x27;</span>,<span class="hljs-string">&#x27;1000&#x27;</span>,<span class="hljs-string">&#x27;Huawei&#x27;</span>),<br>(<span class="hljs-string">&#x27;I006&#x27;</span>,<span class="hljs-string">&#x27;Mouse&#x27;</span>,<span class="hljs-string">&#x27;70&#x27;</span>,<span class="hljs-string">&#x27;Huawei&#x27;</span>),<br>(<span class="hljs-string">&#x27;I007&#x27;</span>,<span class="hljs-string">&#x27;Mouse&#x27;</span>,<span class="hljs-string">&#x27;80&#x27;</span>,<span class="hljs-string">&#x27;Logistech&#x27;</span>),<br>(<span class="hljs-string">&#x27;I008&#x27;</span>,<span class="hljs-string">&#x27;Printer&#x27;</span>,<span class="hljs-string">&#x27;500&#x27;</span>,<span class="hljs-string">&#x27;HP&#x27;</span>),<br>(<span class="hljs-string">&#x27;I009&#x27;</span>,<span class="hljs-string">&#x27;Printer&#x27;</span>,<span class="hljs-string">&#x27;300&#x27;</span>,<span class="hljs-string">&#x27;Canon&#x27;</span>),<br>(<span class="hljs-string">&#x27;I010&#x27;</span>,<span class="hljs-string">&#x27;Speaker&#x27;</span>,<span class="hljs-string">&#x27;50&#x27;</span>,<span class="hljs-string">&#x27;Huawei&#x27;</span>);<br><span class="hljs-keyword">select</span> *<span class="hljs-keyword">from</span> item;<br></code></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs 1c">insert into transaction<br>(InvoiceNo,customeID,ItemID,StaffID,Quantity)<br>values<br>(&#x27;<span class="hljs-number">1000</span>1&#x27;,&#x27;C001&#x27;,&#x27;I003&#x27;,&#x27;S001&#x27;,&#x27;1&#x27;),<br>(&#x27;<span class="hljs-number">1000</span>2&#x27;,&#x27;C001&#x27;,&#x27;I004&#x27;,&#x27;S001&#x27;,&#x27;1&#x27;),<br>(&#x27;<span class="hljs-number">1000</span>3&#x27;,&#x27;C002&#x27;,&#x27;I001&#x27;,&#x27;S001&#x27;,&#x27;1&#x27;),<br>(&#x27;<span class="hljs-number">1000</span>4&#x27;,&#x27;C002&#x27;,&#x27;I006&#x27;,&#x27;S001&#x27;,&#x27;1&#x27;),<br>(&#x27;<span class="hljs-number">1000</span>5&#x27;,&#x27;C003&#x27;,&#x27;I002&#x27;,&#x27;S002&#x27;,&#x27;5&#x27;),<br>(&#x27;<span class="hljs-number">1000</span>6&#x27;,&#x27;C003&#x27;,&#x27;I007&#x27;,&#x27;S002&#x27;,&#x27;5&#x27;),<br>(&#x27;<span class="hljs-number">1000</span>7&#x27;,&#x27;C004&#x27;,&#x27;I009&#x27;,&#x27;S003&#x27;,&#x27;3&#x27;),<br>(&#x27;<span class="hljs-number">1000</span>8&#x27;,&#x27;C004&#x27;,&#x27;I008&#x27;,&#x27;S003&#x27;,&#x27;2&#x27;),<br>(&#x27;<span class="hljs-number">1000</span>9&#x27;,&#x27;C005&#x27;,&#x27;I001&#x27;,&#x27;S003&#x27;,&#x27;2&#x27;),<br>(&#x27;<span class="hljs-number">1001</span>0&#x27;,&#x27;C005&#x27;,&#x27;I005&#x27;,&#x27;S003&#x27;,&#x27;2&#x27;);<br>select *from transaction;<br></code></pre></td></tr></table></figure>
+<p>以上全是准备工作，现在才是重点</p>
+<figure class="highlight plaintext"><figcaption><span>Write a query to display list of purchase item for customer ID (C001, C002).</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs 1.">select * from Transaction<br>where customeID IN(&#x27;C001&#x27;,&#x27;C002&#x27;);<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>Write a query to display list of customer for Staff ID (S001, S002).</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs 2.">select * from Transaction<br>where staffID IN(&#x27;s001&#x27;,&#x27;s002&#x27;);<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>Write a query to display the customer ID, customer full name, and Full Address from customer Table.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs 3.">select customerID as&#x27;ID NO&#x27;,<br>concat(FirstName,&#x27; &#x27;,LastName) &#x27;Full Name&#x27;,<br>concat(street,&#x27;,&#x27;,city,&#x27;,&#x27;,state) &#x27;Mailing Address&#x27;<br>from customer;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>Write a query to display the item id, item name, and price that price more than RM700.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs 4.">select itemID,itemname,price<br>from item<br>where price &gt;=700<br>order by price;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>Write a query to display the customer id, fullname (First+LastName), state that live in Selangor.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs 5.">select customerID, <br>concat(firstname,&#x27; &#x27;,lastname) as &#x27;FULL Name&#x27;, state<br>from customer<br>where state = &#x27;selangor&#x27;;//where state like &#x27;sel%&#x27;;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>Write a query to list all the state in customer table.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs 6.">select distinct state   //避免重复的<br>from customer;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>Write a query to display the price range is between 500 to 2000</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs 7.">select *from item<br>where price between 500 and 2000 //注意between和in的区别<br>order by price;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>Write a query where clerk salary is less than 1,500 and working before 2011.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs 8.">select *from salesman<br>where Salary &lt;= 2000 and WorkingDate &lt;= &#x27;2011-01-01&#x27; //注意日期写法<br>order by WorkingDate;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>Write a query to display customer age.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs 9.">select customerID, concat(firstname,&#x27; &#x27;,lastname) as &#x27;full name&#x27;,<br>concat(street,&#x27;,&#x27;,city,&#x27;,&#x27;,state)as&#x27;full address&#x27;,dateofbirth,   //真的复杂，之前合并了，现在就都得写<br>(date_format(FROM_DAYS(DATEDIFF(NOW(),Dateofbirth)),&#x27;%Y&#x27;) + 0)as age //这个不会真要背吧<br>from customer<br>order by age;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>Write a query to display working experience.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs 10.">select staffid,staffname,workingdate,<br>(date_format(FROM_DAYS(DATEDIFF(NOW(),workingdate)),&#x27;%Y&#x27;) + 0)as &#x27;working experience&#x27; //长string用‘ ’括起来<br>from salesman<br>order by workingdate desc;<br></code></pre></td></tr></table></figure>
+<h3 id="第7周作业"><a href="#第7周作业" class="headerlink" title="第7周作业"></a>第7周作业</h3><figure class="highlight plaintext"><figcaption><span>a query to display list of member information where name start with J.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs Write">select FirstName,<br>from members<br>where FirstName like &#x27;J%&#x27;;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>a query to display list of member that register for Diamond membership.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs Write">select *,<br>from members<br>where tpye_name = &#x27;Diamond&#x27;;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>a query to list all the state in member table.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs Write">select distinct state<br>from members;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>a query to display the member ID, member full name, Full Address, membership and sort by membership.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs Write">select memberID,<br>concat(LastName,&#x27;,&#x27;,city,&#x27;,&#x27;,FirstName)&#x27;Full Name&#x27;,<br>concat(Street,&#x27;,&#x27;,City,&#x27;,&#x27;,State)&#x27;Full Address&#x27;),type_name,<br>from member<br>order by type_name;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>a query to display member age.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs Write">select memberID,<br>concat(LastName,&#x27;,&#x27;,city,&#x27;,&#x27;,FirstName)&#x27;Full Name&#x27;,<br>concat(Street,&#x27;,&#x27;,City,&#x27;,&#x27;,State)&#x27;Full Address&#x27;),type_name,DOB,<br>((date_format(FROM_DAYS(DATEDIFF(NOW(),Dateofbirth)),&#x27;%Y&#x27;) + 0)as age<br>from member<br>order by age;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>a query to display member that lives in Johor or Selangor.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs Write">select memberID,<br>concat(LastName,&#x27;,&#x27;,city,&#x27;,&#x27;,FirstName)&#x27;Full Name&#x27;,<br>concat(Street,&#x27;,&#x27;,City,&#x27;,&#x27;,State)&#x27;Full Address&#x27;),type_name,DOB,<br>((date_format(FROM_DAYS(DATEDIFF(NOW(),DOB)),&#x27;%Y&#x27;) + 0)as age<br>from member<br>where state = &#x27;Johor&#x27; or state = &#x27;selangor&#x27; -- where state in (&#x27;Johor&#x27;,&#x27;selangor&#x27;)<br>order by age;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>a query to display MemberID, ClassID, TrainerID and sort by ClassID.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs Write">select memberID,classID,<br>from register<br>order by classID;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>a query to display the class id, class name, and class price between RM50 and RM150.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs Write">select classID,ClassName,Fee<br>from class<br>where fee between 50 and 150;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>a query where trainer salary is less than 3,000 and working before 2015.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs Write">select *<br>from trainer<br>where salary &lt;3000 and WorkingDate &lt;&#x27;2015-01-01&#x27;; --第一个是年，第二个是日，最后是月<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>a query where trainer working experience is less than 5 years or specialized in Martial arts.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs Write">select trainerID,trainerName,workingDate,skill,<br>((date_format(FROM_DAYS(DATEDIFF(NOW(),workingdate)),&#x27;%Y&#x27;) + 0)as experience<br>from trainer<br>where wokingdate &gt;&#x27;2019-01-01&#x27; or skillID = &#x27;s001&#x27;; --大大的注意不能用experience来比较，系统不知道我们新建的这个是什么意思，所以还是只能用已有的workingdate.<br></code></pre></td></tr></table></figure>
+<p>总的来说，给列赋予别名时AS关键字是可选的，而且别名不需要用引号括起来。</p>
+<h3 id="第八周-Adding-Jion-Queries"><a href="#第八周-Adding-Jion-Queries" class="headerlink" title="第八周 Adding Jion Queries"></a>第八周 Adding Jion Queries</h3><h4 id="inner-join"><a href="#inner-join" class="headerlink" title="inner join"></a>inner join</h4><figure class="highlight plaintext"><figcaption><span>和 register 的交集.跟以前不一样是要加例如member.前缀</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs 找到members">SELECT register.MemberID , members.firstName,<br>members.LastName, register.ClassId<br>from members inner join register on members.MemberID = register.memberID;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>relationship不要超过2.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs 升级版，但是一个table的">SELECT register.MemberID , concat(members.firstName,&#x27; &#x27;,members.LastName) as &#x27;Full Nmae&#x27;, register.ClassId, concat(members.street,&#x27; &#x27;,members.city,&#x27; &#x27;,members.state)&#x27;Address&#x27;,<br>class.classname, class.price, membership.type_name<br>from membership inner join members on membership.type_name = members.type_name <br> inner join register on members.MemberID = register.memberID <br> inner join class on register.classid = class.classid<br></code></pre></td></tr></table></figure>
+<h4 id="outer-join"><a href="#outer-join" class="headerlink" title="outer join"></a>outer join</h4><h4 id="left-join"><a href="#left-join" class="headerlink" title="left join"></a>left join</h4><h4 id="right-join"><a href="#right-join" class="headerlink" title="right join"></a>right join</h4><h4 id="full-join"><a href="#full-join" class="headerlink" title="full join"></a>full join</h4><p>!(){1.png}</p>
+<h4 id="aggreate"><a href="#aggreate" class="headerlink" title="aggreate"></a>aggreate</h4><p>count, sum, min, max, average</p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs oxygene"><span class="hljs-keyword">select</span> a,b,c,<br>count(<span class="hljs-keyword">register</span>.classid) <span class="hljs-keyword">as</span> <span class="hljs-string">&#x27;Total class&#x27;</span>,<br>sum(<span class="hljs-keyword">class</span>.price)<span class="hljs-keyword">as</span> <span class="hljs-string">&#x27;Total price&#x27;</span><br><span class="hljs-keyword">from</span> member <span class="hljs-keyword">class</span> <span class="hljs-keyword">join</span> <span class="hljs-keyword">register</span> <span class="hljs-keyword">on</span> member.memberid = <span class="hljs-keyword">register</span>.memberid<br><span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> <span class="hljs-keyword">register</span>.memberid      --<span class="hljs-keyword">group</span> 必不可少<br></code></pre></td></tr></table></figure>
+<h4 id="Mathematic-calculation"><a href="#Mathematic-calculation" class="headerlink" title="Mathematic calculation"></a>Mathematic calculation</h4><ul>
+<li>&#x2F; - +<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs axapta"><span class="hljs-keyword">sum</span>(<span class="hljs-keyword">class</span>.price)<span class="hljs-keyword">as</span><span class="hljs-string">&quot;before discount&quot;</span>,<br><span class="hljs-keyword">sum</span>((<span class="hljs-number">1</span>-membership.discout) * <span class="hljs-keyword">class</span>.price)<span class="hljs-keyword">as</span> <span class="hljs-string">&quot;Total Amount&quot;</span><br><span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> member.memberid;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="9"><a href="#9" class="headerlink" title="9"></a>9</h3><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs n1ql"><span class="hljs-keyword">select</span> <span class="hljs-keyword">transaction</span>.staffid, salesman.StaffName,<br><span class="hljs-built_in">count</span>(<span class="hljs-keyword">transaction</span>.itemid)<span class="hljs-string">&#x27;order number&#x27;</span>,<br><span class="hljs-built_in">sum</span>(<span class="hljs-keyword">transaction</span>.quantity)<span class="hljs-string">&#x27;total quantity&#x27;</span>,<br><span class="hljs-built_in">sum</span>(<span class="hljs-keyword">transaction</span>.quantity*item.price) <span class="hljs-string">&#x27;total sales&#x27;</span>,<br>(<span class="hljs-built_in">sum</span>(<span class="hljs-keyword">transaction</span>.quantity*item.price))*<span class="hljs-number">0.1</span>+salesman.Salary <span class="hljs-keyword">as</span> <span class="hljs-string">&#x27;salery&#x27;</span><br><span class="hljs-keyword">from</span> salesman  <span class="hljs-keyword">inner</span> <span class="hljs-keyword">join</span> <span class="hljs-keyword">transaction</span> <span class="hljs-keyword">on</span> salesman.staffid = <span class="hljs-keyword">transaction</span>.staffid<br><span class="hljs-keyword">inner</span> <span class="hljs-keyword">join</span> item <span class="hljs-keyword">on</span> item.itemid = <span class="hljs-keyword">transaction</span>.itemid<br><span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> <span class="hljs-keyword">transaction</span>.staffid;<br></code></pre></td></tr></table></figure>
+<h3 id="10"><a href="#10" class="headerlink" title="10"></a>10</h3><p>往已经有的table里加外键</p>
+<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sas"><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> registration<br><span class="hljs-keyword">add</span> <span class="hljs-keyword">foreign</span> <span class="hljs-keyword">key</span> (staffid)<br><span class="hljs-keyword">references</span> staff(staffid);<br></code></pre></td></tr></table></figure>
+<p>Exercise</p>
+<ol>
+<li>Write a query to display list of GuestID, Guest Full Name, Guest Address, and RoomID from registration<br>and guest table.</li>
+<li>Write a query to display list of GuestID, Guest Full Name, Guest Address, RoomID, Roomtype from<br>registration, guest and room table.</li>
+<li>Write a query to display list of GuestID, Guest Full Name, Guest Address, RoomID, Roomtype from<br>registration, guest and room table where Firstname start with ‘J’ and lives in Selangor. Compare the<br>registration and guest for Null values.</li>
+<li>Write a query to count how many room that every guest has book.</li>
+<li>Write a query for the SUM cost that the guest needs to pay for the room.</li>
+<li>Write a query for the discounted rooms for every guest.</li>
+<li>Write a query to count how many room that every staff has submitted.</li>
+<li>Write a total sum of sales for every staff.</li>
+<li>Calculate the total salary for staff if they get 15% commission from the total sales.</li>
+<li>Calculate the age and working experience from guest and staff where age &lt; 30 years old or working<br>experience &gt; 10.<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs stylus">select registration<span class="hljs-selector-class">.guestid</span>,<br><span class="hljs-function"><span class="hljs-title">concat</span><span class="hljs-params">(guest.firstname,<span class="hljs-string">&#x27;  &#x27;</span>,guest.lastname)</span></span> <span class="hljs-string">&#x27;full name&#x27;</span>,<br><span class="hljs-function"><span class="hljs-title">concat</span><span class="hljs-params">(guest.street,<span class="hljs-string">&#x27; ,&#x27;</span>,guest.city,<span class="hljs-string">&#x27; ,&#x27;</span>,guest.state)</span></span> <span class="hljs-string">&#x27;mailing address&#x27;</span>,<br>registration<span class="hljs-selector-class">.roomid</span>, room<span class="hljs-selector-class">.roomtype</span>,room<span class="hljs-selector-class">.price</span><br>from guest inner join registration on guest<span class="hljs-selector-class">.guestid</span> = registration<span class="hljs-selector-class">.guestid</span><br>inner join room on registration<span class="hljs-selector-class">.roomid</span> = room.roomid<br></code></pre></td></tr></table></figure>
+在后面加where guest.firsname like ‘%kun’； 会发现结果为空，empty output &#x3D; no sharing data on selected condition;<br>但是加 left outer<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">from</span> guest <span class="hljs-keyword">left</span> <span class="hljs-keyword">outer</span> <span class="hljs-keyword">join</span> registration <span class="hljs-keyword">on</span> guest.guestid <span class="hljs-operator">=</span> registration.guestid<br><span class="hljs-keyword">left</span> <span class="hljs-keyword">outer</span> <span class="hljs-keyword">join</span> room <span class="hljs-keyword">on</span> registration.roomid <span class="hljs-operator">=</span> room.roomid<br><span class="hljs-keyword">where</span> guest.firstname <span class="hljs-keyword">like</span> <span class="hljs-string">&#x27;j%&#x27;</span> <span class="hljs-keyword">and</span> guest.state <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;selangor&#x27;</span>;<br></code></pre></td></tr></table></figure>
+有的变成null了 这个意思是no data;<br>再加：where registration.guestid is null; 出来的结果表示还没有订房间的客人；<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">select</span> registration.guestid,<br>concat(guest.firstname,<span class="hljs-string">&#x27;  &#x27;</span>,guest.lastname)<span class="hljs-keyword">as</span> <span class="hljs-string">&#x27;full name&#x27;</span>,<br>concat(guest.street,<span class="hljs-string">&#x27; ,&#x27;</span>,guest.city,<span class="hljs-string">&#x27; ,&#x27;</span>,guest.state) <span class="hljs-string">&#x27;mailing address&#x27;</span>,<br>sum(room.price*datediff(registration.checkout,registration.checkin))<span class="hljs-keyword">as</span> <span class="hljs-string">&#x27;total pay&#x27;</span>,<br>((<span class="hljs-number">100</span>-membership.discount)/<span class="hljs-number">100</span>) <span class="hljs-keyword">as</span> <span class="hljs-string">&#x27;total discount&#x27;</span><br><span class="hljs-keyword">from</span> membership <span class="hljs-keyword">inner</span> <span class="hljs-keyword">join</span> guest <span class="hljs-keyword">on</span> membership.<span class="hljs-keyword">type</span> = guest.<span class="hljs-keyword">type</span><br><span class="hljs-keyword">inner</span> <span class="hljs-keyword">join</span> registration <span class="hljs-keyword">on</span> guest.guestid = registration.guestid<br><span class="hljs-keyword">inner</span> <span class="hljs-keyword">join</span> room <span class="hljs-keyword">on</span> registration.roomid = room.roomid<br><span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> registration.guestid;<br></code></pre></td></tr></table></figure></li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>mysql</div>
+      <div>http://example.com/2023/10/19/mysql/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Leo Li</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年10月19日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/10/19/stl/" title="stl">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">stl</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/09/22/AI-course/" title="AI_course">
+                        <span class="hidden-mobile">AI_course</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
 <script>
-  const endLoading = function() {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loader').classList.add("loading");
-  }
-  window.addEventListener('load', endLoading);
-  document.getElementById('loader').addEventListener('click', endLoading);
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
 </script>
 
 
-    <div id="container">
-        <div id="wrap">
-            <header id="header">
-    
-        <img data-src="/images/hualihushao1.jpg" data-sizes="auto" alt="mysql" class="lazyload">
-    
-    <div id="header-outer" class="outer">
-        <div id="header-title" class="inner">
-            <div id="logo-wrap">
-                
-                    
-                    
-                        <a href="/" id="logo"><h1>mysql</h1></a>
-                    
-                
-            </div>
-            
-                
-                
-            
-        </div>
-        <div id="header-inner">
-            <nav id="main-nav">
-                <a id="main-nav-toggle" class="nav-icon"></a>
-                
-                    <span class="main-nav-link-wrap">
-                        <span class="main-nav-icon"></span>
-                        <a class="main-nav-link" href="/">首页</a>
-                    </span>
-                
-                    <span class="main-nav-link-wrap">
-                        <span class="main-nav-icon"></span>
-                        <a class="main-nav-link" href="/archives">归档</a>
-                    </span>
-                
-                    <span class="main-nav-link-wrap">
-                        <span class="main-nav-icon"></span>
-                        <a class="main-nav-link" href="/about">关于</a>
-                    </span>
-                
-                    <span class="main-nav-link-wrap">
-                        <span class="main-nav-icon"></span>
-                        <a class="main-nav-link" href="/friend">友链</a>
-                    </span>
-                
-            </nav>
-            <nav id="sub-nav">
-                
-                    <a id="nav-rss-link" class="nav-icon" href="/atom.xml"
-                       title="RSS 订阅"></a>
-                
-                
-            </nav>
-            <div id="search-form-wrap">
-                <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-            </div>
-        </div>
-    </div>
-</header>
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
-            <div id="content" class="outer">
-                <section id="main"><article id="mysql-mysql" class="h-entry article article-type-mysql"
-         itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-    <div class="article-inner">
-        <div class="article-meta">
-            <div class="article-date wow slideInLeft">
-    <a href="/2023/10/19/mysql/" class="article-date-link">
-        <time datetime="2023-10-19T01:18:32.000Z"
-              itemprop="datePublished">2023-10-19</time>
-    </a>
-</div>
-
-            
-
-        </div>
-        <div class="hr-line"></div>
-        
-
-        <div class="e-content article-entry" itemprop="articleBody">
-            
-                <h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select student_ID,student_Name</span><br><span class="line">from student;</span><br><span class="line">where student_Name = &#x27;Mary Lamb&#x27;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select distinct student_Name，student_Address//查找可以有重复的，比如同一个人但是住在不同的地方或者同名的人；不能查找unique的元素。</span><br><span class="line">from student;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>criteria</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select *</span><br><span class="line">from student</span><br><span class="line">where student_Mobile &gt;111 and student_Age &lt;18;</span><br></pre></td></tr></table></figure>
-<p>not in(‘  ‘,’  ‘);<br>between 1 and 5;(1,2,3,4,5)<br>in(1,5);(1,5)</p>
-<h3 id=""><a href="#" class="headerlink" title="%"></a>%</h3><p>A% &#x3D; A____  例如AHMAD;<br>%A &#x3D; _<em><strong>A  例如SERA；<br>%A% &#x3D; <em>A</em></strong></em>  例如 SEAR；<br>A%A；<br>…</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select *</span><br><span class="line">from student</span><br><span class="line">where student_Name like &#x27;L%K%&#x27;;</span><br></pre></td></tr></table></figure>
-<h3 id="group-by"><a href="#group-by" class="headerlink" title="group by"></a>group by</h3><h3 id="join"><a href="#join" class="headerlink" title="join"></a>join</h3><h3 id="drop"><a href="#drop" class="headerlink" title="drop"></a>drop</h3><h3 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h3><p>记得删除要加from;<br>安全删除日志或单独的记录，可以复原，不删除表的关系等。而drop会删掉所有的并不能复原；</p>
-<h3 id="concat-把两个column合在一起，只是查询临时放在一起"><a href="#concat-把两个column合在一起，只是查询临时放在一起" class="headerlink" title="concat 把两个column合在一起，只是查询临时放在一起"></a>concat 把两个column合在一起，只是查询临时放在一起</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select concat(student_ID,&#x27;,&#x27;,student_Name)as&#x27;student info&#x27;</span><br><span class="line">from student;</span><br></pre></td></tr></table></figure>
-<h3 id="add-datetime-null-default-now"><a href="#add-datetime-null-default-now" class="headerlink" title="add _ datetime null default now()"></a>add _ datetime null default now()</h3><figure class="highlight plaintext"><figcaption><span>_ 中</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alter table student</span><br><span class="line">add student_time datetime null default now();</span><br></pre></td></tr></table></figure>
-<h3 id="insert"><a href="#insert" class="headerlink" title="insert"></a>insert</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">insert into student</span><br><span class="line">(student_Name,student_Mobile,student_Email,student_ID)</span><br><span class="line">values</span><br><span class="line">(&#x27;LK&#x27;,&#x27;0&#x27;,&#x27;0&#x27;,&#x27;xmus004&#x27;);//加入新人lk</span><br><span class="line">select * from student</span><br><span class="line">order by student_ID;//显示顺序</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alter table student</span><br><span class="line">add DOB date NULL;</span><br><span class="line">alter table student</span><br><span class="line">add AGE int null;</span><br></pre></td></tr></table></figure>
-<p>然后设置一个DOB：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">update student</span><br><span class="line">set DOB = &#x27;2020-03-14&#x27;</span><br><span class="line">where student_ID = &#x27;xmus002&#x27;;</span><br></pre></td></tr></table></figure>
-<p>根据设置的DOB来自动计算人年龄：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">update student</span><br><span class="line">set AGE =date_format(FROM_DAYS(DATEDIFF(NOW(),DOB)),&#x27;%Y&#x27;) + 0</span><br><span class="line">where student_ID between &#x27;xmus001&#x27; and &#x27;xmus004&#x27;;</span><br></pre></td></tr></table></figure>
-<h2 id="第6周作业"><a href="#第6周作业" class="headerlink" title="第6周作业"></a>第6周作业</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database shop;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use shop;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">create table customer</span><br><span class="line">(</span><br><span class="line">customerID varchar(10) not null primary key,</span><br><span class="line">FirstName varchar(20) not null,</span><br><span class="line">LastName varchar(20) not null,</span><br><span class="line">DateofBirth date null,</span><br><span class="line">street varchar(20) null,</span><br><span class="line">city varchar(20) null,</span><br><span class="line">state varchar(20) null,</span><br><span class="line">MobileNo int null</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">create table item</span><br><span class="line">(</span><br><span class="line">ItemID varchar(10) not null primary key,</span><br><span class="line">ItemName varchar(20) not null,</span><br><span class="line">Price decimal(10,2) null,</span><br><span class="line">Brand varchar(20) not null</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">create table salesman</span><br><span class="line">(</span><br><span class="line">StaffID varchar(10) not null primary key,</span><br><span class="line">StaffName varchar(20) not null,</span><br><span class="line">WorkingDate date null,</span><br><span class="line">Salary decimal(10,2) null</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">create table transaction</span><br><span class="line">(</span><br><span class="line">InvoiceNo int not null primary key,</span><br><span class="line">CustomeID varchar(10) not null,     //primary key 和 forigen key 都不能为null</span><br><span class="line">ItemID varchar(10) not null,</span><br><span class="line">StaffID varchar(10) not null,</span><br><span class="line">Quantity int null,</span><br><span class="line">TotalAmount decimal(10,2) null,</span><br><span class="line">Foreign Key fk_transaction_CustomerID(customeID) references Customer(customerID),//不用区分大小写</span><br><span class="line">Foreign Key fk_transaction_ItemID(ItemID) references item(ItemID),</span><br><span class="line">Foreign Key fk_transaction_StaffID(staffID) references salesman(staffID)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">insert into Customer</span><br><span class="line">(customerID, FirstName,LastName,DateofBirth,Street,City,state,MobileNo)</span><br><span class="line">values</span><br><span class="line">(&#x27;C001&#x27;,&#x27;Britney&#x27;,&#x27;Spears&#x27;,&#x27;2020-10-04&#x27;,&#x27;2nd Street&#x27;,&#x27;Sepang&#x27;,&#x27;Selangor&#x27;,&#x27;09222333&#x27;),</span><br><span class="line">(&#x27;C002&#x27;,&#x27;Britney&#x27;,&#x27;Jackson&#x27;,&#x27;2007-06-04&#x27;,&#x27;3rd Street&#x27;,&#x27;Shah Alam&#x27;,&#x27;Selangor&#x27;,&#x27;019444333&#x27;),</span><br><span class="line">(&#x27;C003&#x27;,&#x27;John&#x27;,&#x27;Wick&#x27;,&#x27;1996-04-07&#x27;,&#x27;2nd Level&#x27;,&#x27;Butterworth&#x27;,&#x27;Penang&#x27;,&#x27;019999333&#x27;),</span><br><span class="line">(&#x27;C004&#x27;,&#x27;John&#x27;,&#x27;Cena&#x27;,&#x27;1990-03-03&#x27;,&#x27;3rd Floor&#x27;,&#x27;Georgetown&#x27;,&#x27;Penang&#x27;,&#x27;012222333&#x27;),</span><br><span class="line">(&#x27;C005&#x27;,&#x27;Elizabeth&#x27;,&#x27;Stone&#x27;,&#x27;1985-04-03&#x27;,&#x27;4th Street&#x27;,&#x27;Sepang&#x27;,&#x27;Selangor&#x27;,&#x27;012567333&#x27;),</span><br><span class="line">(&#x27;C006&#x27;,&#x27;Jimmy&#x27;,&#x27;Stone&#x27;,&#x27;2002-10-03&#x27;,&#x27;2nd Street&#x27;,&#x27;Shah Alam&#x27;,&#x27;Selangor&#x27;,&#x27;019224433&#x27;),</span><br><span class="line">(&#x27;C007&#x27;,&#x27;Justin&#x27;,&#x27;Timerlake&#x27;,&#x27;2015-06-04&#x27;,&#x27;2nd Street&#x27;,&#x27;Shah Alam&#x27;,&#x27;Selangor&#x27;,&#x27;019444333&#x27;);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">insert into Item</span><br><span class="line">(ItemID, ItemName,Price,Brand)</span><br><span class="line">values</span><br><span class="line">(&#x27;I001&#x27;,&#x27;Laptop&#x27;,&#x27;1500&#x27;,&#x27;Huawei&#x27;),</span><br><span class="line">(&#x27;I002&#x27;,&#x27;Laptop&#x27;,&#x27;1700&#x27;,&#x27;Dell&#x27;),</span><br><span class="line">(&#x27;I003&#x27;,&#x27;Laptop&#x27;,&#x27;3500&#x27;,&#x27;Apple&#x27;),</span><br><span class="line">(&#x27;I004&#x27;,&#x27;Tablet&#x27;,&#x27;800&#x27;,&#x27;Apple&#x27;),</span><br><span class="line">(&#x27;I005&#x27;,&#x27;Tablet&#x27;,&#x27;1000&#x27;,&#x27;Huawei&#x27;),</span><br><span class="line">(&#x27;I006&#x27;,&#x27;Mouse&#x27;,&#x27;70&#x27;,&#x27;Huawei&#x27;),</span><br><span class="line">(&#x27;I007&#x27;,&#x27;Mouse&#x27;,&#x27;80&#x27;,&#x27;Logistech&#x27;),</span><br><span class="line">(&#x27;I008&#x27;,&#x27;Printer&#x27;,&#x27;500&#x27;,&#x27;HP&#x27;),</span><br><span class="line">(&#x27;I009&#x27;,&#x27;Printer&#x27;,&#x27;300&#x27;,&#x27;Canon&#x27;),</span><br><span class="line">(&#x27;I010&#x27;,&#x27;Speaker&#x27;,&#x27;50&#x27;,&#x27;Huawei&#x27;);</span><br><span class="line">select *from item;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">insert into transaction</span><br><span class="line">(InvoiceNo,customeID,ItemID,StaffID,Quantity)</span><br><span class="line">values</span><br><span class="line">(&#x27;10001&#x27;,&#x27;C001&#x27;,&#x27;I003&#x27;,&#x27;S001&#x27;,&#x27;1&#x27;),</span><br><span class="line">(&#x27;10002&#x27;,&#x27;C001&#x27;,&#x27;I004&#x27;,&#x27;S001&#x27;,&#x27;1&#x27;),</span><br><span class="line">(&#x27;10003&#x27;,&#x27;C002&#x27;,&#x27;I001&#x27;,&#x27;S001&#x27;,&#x27;1&#x27;),</span><br><span class="line">(&#x27;10004&#x27;,&#x27;C002&#x27;,&#x27;I006&#x27;,&#x27;S001&#x27;,&#x27;1&#x27;),</span><br><span class="line">(&#x27;10005&#x27;,&#x27;C003&#x27;,&#x27;I002&#x27;,&#x27;S002&#x27;,&#x27;5&#x27;),</span><br><span class="line">(&#x27;10006&#x27;,&#x27;C003&#x27;,&#x27;I007&#x27;,&#x27;S002&#x27;,&#x27;5&#x27;),</span><br><span class="line">(&#x27;10007&#x27;,&#x27;C004&#x27;,&#x27;I009&#x27;,&#x27;S003&#x27;,&#x27;3&#x27;),</span><br><span class="line">(&#x27;10008&#x27;,&#x27;C004&#x27;,&#x27;I008&#x27;,&#x27;S003&#x27;,&#x27;2&#x27;),</span><br><span class="line">(&#x27;10009&#x27;,&#x27;C005&#x27;,&#x27;I001&#x27;,&#x27;S003&#x27;,&#x27;2&#x27;),</span><br><span class="line">(&#x27;10010&#x27;,&#x27;C005&#x27;,&#x27;I005&#x27;,&#x27;S003&#x27;,&#x27;2&#x27;);</span><br><span class="line">select *from transaction;</span><br></pre></td></tr></table></figure>
-<p>以上全是准备工作，现在才是重点</p>
-<figure class="highlight plaintext"><figcaption><span>Write a query to display list of purchase item for customer ID (C001, C002).</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from Transaction</span><br><span class="line">where customeID IN(&#x27;C001&#x27;,&#x27;C002&#x27;);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>Write a query to display list of customer for Staff ID (S001, S002).</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from Transaction</span><br><span class="line">where staffID IN(&#x27;s001&#x27;,&#x27;s002&#x27;);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>Write a query to display the customer ID, customer full name, and Full Address from customer Table.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select customerID as&#x27;ID NO&#x27;,</span><br><span class="line">concat(FirstName,&#x27; &#x27;,LastName) &#x27;Full Name&#x27;,</span><br><span class="line">concat(street,&#x27;,&#x27;,city,&#x27;,&#x27;,state) &#x27;Mailing Address&#x27;</span><br><span class="line">from customer;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>Write a query to display the item id, item name, and price that price more than RM700.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select itemID,itemname,price</span><br><span class="line">from item</span><br><span class="line">where price &gt;=700</span><br><span class="line">order by price;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>Write a query to display the customer id, fullname (First+LastName), state that live in Selangor.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select customerID, </span><br><span class="line">concat(firstname,&#x27; &#x27;,lastname) as &#x27;FULL Name&#x27;, state</span><br><span class="line">from customer</span><br><span class="line">where state = &#x27;selangor&#x27;;//where state like &#x27;sel%&#x27;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>Write a query to list all the state in customer table.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select distinct state   //避免重复的</span><br><span class="line">from customer;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>Write a query to display the price range is between 500 to 2000</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select *from item</span><br><span class="line">where price between 500 and 2000 //注意between和in的区别</span><br><span class="line">order by price;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>Write a query where clerk salary is less than 1,500 and working before 2011.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select *from salesman</span><br><span class="line">where Salary &lt;= 2000 and WorkingDate &lt;= &#x27;2011-01-01&#x27; //注意日期写法</span><br><span class="line">order by WorkingDate;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>Write a query to display customer age.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select customerID, concat(firstname,&#x27; &#x27;,lastname) as &#x27;full name&#x27;,</span><br><span class="line">concat(street,&#x27;,&#x27;,city,&#x27;,&#x27;,state)as&#x27;full address&#x27;,dateofbirth,   //真的复杂，之前合并了，现在就都得写</span><br><span class="line">(date_format(FROM_DAYS(DATEDIFF(NOW(),Dateofbirth)),&#x27;%Y&#x27;) + 0)as age //这个不会真要背吧</span><br><span class="line">from customer</span><br><span class="line">order by age;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>Write a query to display working experience.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select staffid,staffname,workingdate,</span><br><span class="line">(date_format(FROM_DAYS(DATEDIFF(NOW(),workingdate)),&#x27;%Y&#x27;) + 0)as &#x27;working experience&#x27; //长string用‘ ’括起来</span><br><span class="line">from salesman</span><br><span class="line">order by workingdate desc;</span><br></pre></td></tr></table></figure>
-<h3 id="第7周作业"><a href="#第7周作业" class="headerlink" title="第7周作业"></a>第7周作业</h3><figure class="highlight plaintext"><figcaption><span>a query to display list of member information where name start with J.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select FirstName,</span><br><span class="line">from members</span><br><span class="line">where FirstName like &#x27;J%&#x27;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>a query to display list of member that register for Diamond membership.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select *,</span><br><span class="line">from members</span><br><span class="line">where tpye_name = &#x27;Diamond&#x27;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>a query to list all the state in member table.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select distinct state</span><br><span class="line">from members;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>a query to display the member ID, member full name, Full Address, membership and sort by membership.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select memberID,</span><br><span class="line">concat(LastName,&#x27;,&#x27;,city,&#x27;,&#x27;,FirstName)&#x27;Full Name&#x27;,</span><br><span class="line">concat(Street,&#x27;,&#x27;,City,&#x27;,&#x27;,State)&#x27;Full Address&#x27;),type_name,</span><br><span class="line">from member</span><br><span class="line">order by type_name;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>a query to display member age.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">select memberID,</span><br><span class="line">concat(LastName,&#x27;,&#x27;,city,&#x27;,&#x27;,FirstName)&#x27;Full Name&#x27;,</span><br><span class="line">concat(Street,&#x27;,&#x27;,City,&#x27;,&#x27;,State)&#x27;Full Address&#x27;),type_name,DOB,</span><br><span class="line">((date_format(FROM_DAYS(DATEDIFF(NOW(),Dateofbirth)),&#x27;%Y&#x27;) + 0)as age</span><br><span class="line">from member</span><br><span class="line">order by age;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>a query to display member that lives in Johor or Selangor.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select memberID,</span><br><span class="line">concat(LastName,&#x27;,&#x27;,city,&#x27;,&#x27;,FirstName)&#x27;Full Name&#x27;,</span><br><span class="line">concat(Street,&#x27;,&#x27;,City,&#x27;,&#x27;,State)&#x27;Full Address&#x27;),type_name,DOB,</span><br><span class="line">((date_format(FROM_DAYS(DATEDIFF(NOW(),DOB)),&#x27;%Y&#x27;) + 0)as age</span><br><span class="line">from member</span><br><span class="line">where state = &#x27;Johor&#x27; or state = &#x27;selangor&#x27; -- where state in (&#x27;Johor&#x27;,&#x27;selangor&#x27;)</span><br><span class="line">order by age;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>a query to display MemberID, ClassID, TrainerID and sort by ClassID.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select memberID,classID,</span><br><span class="line">from register</span><br><span class="line">order by classID;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>a query to display the class id, class name, and class price between RM50 and RM150.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select classID,ClassName,Fee</span><br><span class="line">from class</span><br><span class="line">where fee between 50 and 150;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>a query where trainer salary is less than 3,000 and working before 2015.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select *</span><br><span class="line">from trainer</span><br><span class="line">where salary &lt;3000 and WorkingDate &lt;&#x27;2015-01-01&#x27;; --第一个是年，第二个是日，最后是月</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>a query where trainer working experience is less than 5 years or specialized in Martial arts.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select trainerID,trainerName,workingDate,skill,</span><br><span class="line">((date_format(FROM_DAYS(DATEDIFF(NOW(),workingdate)),&#x27;%Y&#x27;) + 0)as experience</span><br><span class="line">from trainer</span><br><span class="line">where wokingdate &gt;&#x27;2019-01-01&#x27; or skillID = &#x27;s001&#x27;; --大大的注意不能用experience来比较，系统不知道我们新建的这个是什么意思，所以还是只能用已有的workingdate.</span><br></pre></td></tr></table></figure>
-<p>总的来说，给列赋予别名时AS关键字是可选的，而且别名不需要用引号括起来。</p>
-<h3 id="第八周-Adding-Jion-Queries"><a href="#第八周-Adding-Jion-Queries" class="headerlink" title="第八周 Adding Jion Queries"></a>第八周 Adding Jion Queries</h3><h4 id="inner-join"><a href="#inner-join" class="headerlink" title="inner join"></a>inner join</h4><figure class="highlight plaintext"><figcaption><span>和 register 的交集.跟以前不一样是要加例如member.前缀</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT register.MemberID , members.firstName,</span><br><span class="line">members.LastName, register.ClassId</span><br><span class="line">from members inner join register on members.MemberID = register.memberID;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><figcaption><span>relationship不要超过2.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT register.MemberID , concat(members.firstName,&#x27; &#x27;,members.LastName) as &#x27;Full Nmae&#x27;, register.ClassId, concat(members.street,&#x27; &#x27;,members.city,&#x27; &#x27;,members.state)&#x27;Address&#x27;,</span><br><span class="line">class.classname, class.price, membership.type_name</span><br><span class="line">from membership inner join members on membership.type_name = members.type_name </span><br><span class="line"> inner join register on members.MemberID = register.memberID </span><br><span class="line"> inner join class on register.classid = class.classid</span><br></pre></td></tr></table></figure>
-<h4 id="outer-join"><a href="#outer-join" class="headerlink" title="outer join"></a>outer join</h4><h4 id="left-join"><a href="#left-join" class="headerlink" title="left join"></a>left join</h4><h4 id="right-join"><a href="#right-join" class="headerlink" title="right join"></a>right join</h4><h4 id="full-join"><a href="#full-join" class="headerlink" title="full join"></a>full join</h4><p>!(){1.png}</p>
-<h4 id="aggreate"><a href="#aggreate" class="headerlink" title="aggreate"></a>aggreate</h4><p>count, sum, min, max, average</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select a,b,c,</span><br><span class="line">count(register.classid) as &#x27;Total class&#x27;,</span><br><span class="line">sum(class.price)as &#x27;Total price&#x27;</span><br><span class="line">from member class join register on member.memberid = register.memberid</span><br><span class="line">group by register.memberid      --group 必不可少</span><br></pre></td></tr></table></figure>
-<h4 id="Mathematic-calculation"><a href="#Mathematic-calculation" class="headerlink" title="Mathematic calculation"></a>Mathematic calculation</h4><ul>
-<li>&#x2F; - +<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sum(class.price)as&quot;before discount&quot;,</span><br><span class="line">sum((1-membership.discout) * class.price)as &quot;Total Amount&quot;</span><br><span class="line">group by member.memberid;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="9"><a href="#9" class="headerlink" title="9"></a>9</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">select transaction.staffid, salesman.StaffName,</span><br><span class="line">count(transaction.itemid)&#x27;order number&#x27;,</span><br><span class="line">sum(transaction.quantity)&#x27;total quantity&#x27;,</span><br><span class="line">sum(transaction.quantity*item.price) &#x27;total sales&#x27;,</span><br><span class="line">(sum(transaction.quantity*item.price))*0.1+salesman.Salary as &#x27;salery&#x27;</span><br><span class="line">from salesman  inner join transaction on salesman.staffid = transaction.staffid</span><br><span class="line">inner join item on item.itemid = transaction.itemid</span><br><span class="line">group by transaction.staffid;</span><br></pre></td></tr></table></figure>
+  <script>Fluid.plugins.codeWidget();</script>
 
 
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
 
-
-
-            
-        </div>
-        <footer class="article-footer">
-            <a data-url="http://example.com/2023/10/19/mysql/" data-id="clp6mwbqa0004w0ukbfao388w" data-title="mysql"
-               class="article-share-link">分享</a>
-            
-            
-            
-            
-
-        </footer>
-    </div>
-    
-        
-    <nav id="article-nav" class="wow fadeInUp">
-        
-            <div class="article-nav-link-wrap article-nav-link-left">
-                
-                    
-                    
-                        <img data-src="/images/hualihushao1.jpg" data-sizes="auto" alt="stl"
-                             class="lazyload">
-                    
-                
-                <a href="/2023/10/19/stl/"></a>
-                <div class="article-nav-caption">前一篇</div>
-                <h3 class="article-nav-title">
-                    
-                        stl
-                    
-                </h3>
-            </div>
-        
-        
-            <div class="article-nav-link-wrap article-nav-link-right">
-                
-                    <img data-src="OIP.jpeg" data-sizes="auto" alt="AI_course"
-                         class="lazyload">
-                
-                <a href="/2023/09/22/AI-course/"></a>
-                <div class="article-nav-caption">后一篇</div>
-                <h3 class="article-nav-title">
-                    
-                        AI_course
-                    
-                </h3>
-            </div>
-        
-    </nav>
-
-
-    
-</article>
-
-
-
-
-
-
-
-
-
-
-
-</section>
-                
-                    <aside id="sidebar">
-    <div class="sidebar-wrap wow fadeInRight">
-        <div class="sidebar-author">
-            <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="Leo Li" class="lazyload">
-            <div class="sidebar-author-name">Leo Li</div>
-            <div class="sidebar-description">kun 的博客</div>
-        </div>
-        <div class="sidebar-state">
-            <div class="sidebar-state-article">
-                <div>文章</div>
-                <div class="sidebar-state-number">7</div>
-            </div>
-            <div class="sidebar-state-category">
-                <div>分类</div>
-                <div class="sidebar-state-number">0</div>
-            </div>
-            <div class="sidebar-state-tag">
-                <div>标签</div>
-                <div class="sidebar-state-number">0</div>
-            </div>
-        </div>
-        <div class="sidebar-social">
-            
-                <div class=icon-github>
-                    <a href=https://github.com/leovewc itemprop="url" target="_blank"></a>
-                </div>
-            
-                <div class=icon-google>
-                    <a href=https://plus.google.com/yourname itemprop="url" target="_blank"></a>
-                </div>
-            
-                <div class=icon-twitter>
-                    <a href=https://twitter.com/yourname itemprop="url" target="_blank"></a>
-                </div>
-            
-                <div class=icon-facebook>
-                    <a href=https://www.facebook.com/yourname itemprop="url" target="_blank"></a>
-                </div>
-            
-        </div>
-        <div class="sidebar-menu">
-            
-                <div class="sidebar-menu-link-wrap">
-                    <a class="sidebar-menu-link-dummy" href="/"></a>
-                    <span class="sidebar-menu-icon"></span>
-                    <div class="sidebar-menu-link">首页</div>
-                </div>
-            
-                <div class="sidebar-menu-link-wrap">
-                    <a class="sidebar-menu-link-dummy" href="/archives"></a>
-                    <span class="sidebar-menu-icon"></span>
-                    <div class="sidebar-menu-link">归档</div>
-                </div>
-            
-                <div class="sidebar-menu-link-wrap">
-                    <a class="sidebar-menu-link-dummy" href="/about"></a>
-                    <span class="sidebar-menu-icon"></span>
-                    <div class="sidebar-menu-link">关于</div>
-                </div>
-            
-                <div class="sidebar-menu-link-wrap">
-                    <a class="sidebar-menu-link-dummy" href="/friend"></a>
-                    <span class="sidebar-menu-icon"></span>
-                    <div class="sidebar-menu-link">友链</div>
-                </div>
-            
-        </div>
-    </div>
-    
-        
-
-    
-        
-
-    
-        
-    <div class="widget-wrap wow fadeInRight">
-        <h3 class="widget-title">归档</h3>
-        <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">十月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a></li></ul>
-        </div>
-    </div>
-
-
-    
-</aside>
-
-                
-            </div>
-            <footer id="footer" class="wow fadeInUp">
-    <div style="width: 100%; overflow: hidden"><div class="footer-line"></div></div>
-    <div class="outer">
-        <div id="footer-info" class="inner">
-            
-            <div>
-                <span class="icon-copyright"></span>
-                2020-2023
-                <span class="footer-info-sep"></span>
-                Leo Li
-            </div>
-            
-                <div>
-                    基于&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>&nbsp;
-                    Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" target="_blank">Reimu</a>
-                </div>
-            
-            
-                <div>
-                    <span class="icon-brush"></span>
-                    9.9k
-                    &nbsp;|&nbsp;
-                    <span class="icon-coffee"></span>
-                    00:47
-                </div>
-            
-            
-                <div>
-                    <span class="icon-eye"></span>
-                    <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span></span>
-                    &nbsp;|&nbsp;
-                    <span class="icon-user"></span>
-                    <span id="busuanzi_container_site_uv">总访客量&nbsp;<span id="busuanzi_value_site_uv"></span></span>
-                </div>
-            
-        </div>
-    </div>
-</footer>
-
-        </div>
-        <nav id="mobile-nav">
-    <div class="sidebar-wrap">
-        <div class="sidebar-author">
-            <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="Leo Li" class="lazyload">
-            <div class="sidebar-author-name">Leo Li</div>
-            <div class="sidebar-description">kun 的博客</div>
-        </div>
-        <div class="sidebar-state">
-            <div class="sidebar-state-article">
-                <div>文章</div>
-                <div class="sidebar-state-number">7</div>
-            </div>
-            <div class="sidebar-state-category">
-                <div>分类</div>
-                <div class="sidebar-state-number">0</div>
-            </div>
-            <div class="sidebar-state-tag">
-                <div>标签</div>
-                <div class="sidebar-state-number">0</div>
-            </div>
-        </div>
-        <div class="sidebar-social">
-            
-                <div class=icon-github>
-                    <a href=https://github.com/leovewc itemprop="url" target="_blank"></a>
-                </div>
-            
-                <div class=icon-google>
-                    <a href=https://plus.google.com/yourname itemprop="url" target="_blank"></a>
-                </div>
-            
-                <div class=icon-twitter>
-                    <a href=https://twitter.com/yourname itemprop="url" target="_blank"></a>
-                </div>
-            
-                <div class=icon-facebook>
-                    <a href=https://www.facebook.com/yourname itemprop="url" target="_blank"></a>
-                </div>
-            
-        </div>
-        <div class="sidebar-menu">
-            
-                <div class="sidebar-menu-link-wrap">
-                    <a class="sidebar-menu-link-dummy" href="/"></a>
-                    <span class="sidebar-menu-icon"></span>
-                    <div class="sidebar-menu-link">首页</div>
-                </div>
-            
-                <div class="sidebar-menu-link-wrap">
-                    <a class="sidebar-menu-link-dummy" href="/archives"></a>
-                    <span class="sidebar-menu-icon"></span>
-                    <div class="sidebar-menu-link">归档</div>
-                </div>
-            
-                <div class="sidebar-menu-link-wrap">
-                    <a class="sidebar-menu-link-dummy" href="/about"></a>
-                    <span class="sidebar-menu-icon"></span>
-                    <div class="sidebar-menu-link">关于</div>
-                </div>
-            
-                <div class="sidebar-menu-link-wrap">
-                    <a class="sidebar-menu-link-dummy" href="/friend"></a>
-                    <span class="sidebar-menu-icon"></span>
-                    <div class="sidebar-menu-link">友链</div>
-                </div>
-            
-        </div>
-    </div>
-</nav>
-
-        
-<script src="https://unpkg.com/jquery@3.7.0/dist/jquery.min.js"></script>
-
-
-<script src="https://unpkg.com/lazysizes@5.3.2/lazysizes.min.js"></script>
-
-
-<script src="https://unpkg.com/clipboard@2.0.11/dist/clipboard.min.js"></script>
-
-
-
-    
-<script src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-
-
-
-    
-<script src="https://unpkg.com/busuanzi@2.3.0/bsz.pure.mini.js"></script>
-
-
-
-
-    
-<script src="https://unpkg.com/mermaid@9.4.3/dist/mermaid.min.js"></script>
-
-    <script>
-        if (window.mermaid) {
-            mermaid.initialize({theme: 'forest'});
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
         }
-    </script>
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
 
 
 
-<script src="/js/script.js"></script>
 
 
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
 
 
+  
 
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-    <div class="site-search">
-        <div class="algolia-popup popup">
-            <div class="algolia-search">
-                <span class="algolia-search-input-icon"></span>
-                <div class="algolia-search-input" id="algolia-search-input"></div>
-            </div>
-
-            <div class="algolia-results">
-                <div id="algolia-stats"></div>
-                <div id="algolia-hits"></div>
-                <div id="algolia-pagination" class="algolia-pagination"></div>
-            </div>
-
-            <span class="popup-btn-close"></span>
-        </div>
-    </div>
-    <!-- hexo injector body_end start -->
-<script src="/js/insertHighlight.js"></script>
-<!-- hexo injector body_end end --></body>
-    </html>
-
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
