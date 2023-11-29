@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Li Kun
 subtitle: ''
-description: ''
+description: kun 的博客
 keywords:
-author: John Doe
-language: en
+author: Leo Li
+language: zh-CN
 timezone: ''
 
 # URL
@@ -44,7 +44,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: fals
+  enable: true
   line_number: true
   auto_detect: false
   tab_replace: ''
@@ -97,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: particlex
+theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -105,3 +105,7 @@ deploy:
   type: git
   repo: git@github.com:leovewc/leovewc.github.io.git
   branch: main
+
+#music
+aplayer:
+  meting: true
